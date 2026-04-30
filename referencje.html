@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <title>WiMaks | Referencje</title>
+	    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+	    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+	    <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48.png" />
+	    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+	    <meta
+	      name="description"
+	      content="Referencje i instytucje, które potwierdzają doświadczenie WiMaks jako generalnego wykonawcy i projektanta inwestycji budowlanych."
+	    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="index.html" aria-label="Strona główna WiMaks">
+          <img class="brand-logo" src="assets/LogoWiMaks.png" alt="WiMaks" />
+        </a>
+        <nav class="main-nav" aria-label="Nawigacja główna">
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            data-nav-overlay-open
+            aria-haspopup="dialog"
+            aria-controls="nav-overlay"
+            aria-expanded="false"
+          >
+            O nas <span class="nav-caret" aria-hidden="true"></span>
+          </button>
+          <a href="portfolio.html">Realizacje</a>
+          <a href="podwykonawcy.html">Dla podwykonawców</a>
+          <a href="oferty-pracy.html">Oferty pracy</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <button
+          class="nav-mobile-toggle"
+          type="button"
+          data-nav-overlay-open
+          aria-haspopup="dialog"
+          aria-controls="nav-overlay"
+          aria-expanded="false"
+          aria-label="Otwórz menu"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16v2H4V7Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay" hidden>
+      <div class="nav-overlay-backdrop" data-nav-overlay-close></div>
+      <div class="nav-overlay-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <button class="nav-overlay-close" type="button" data-nav-overlay-close aria-label="Zamknij">
+          ×
+        </button>
+        <div class="nav-overlay-content"></div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section contact-intro-section">
+        <div class="container contact-intro-wrap">
+          <div class="contact-intro-copy">
+            <p class="eyebrow">Referencje</p>
+            <h1>Referencje</h1>
+            <p class="contact-intro-text">
+              Wybrane referencje i instytucje, które potwierdzają nasze doświadczenie w realizacji inwestycji.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" aria-labelledby="refs-title">
+        <div class="container">
+          <div class="split-heading refs-heading">
+            <h2 id="refs-title">Dokumenty referencyjne</h2>
+            <p class="split-heading-note">
+              Poniżej znajdziesz przykładowe referencje potwierdzające zakres i standard naszych realizacji.
+            </p>
+          </div>
+          <div class="refs-grid" aria-label="Referencje">
+            <figure class="refs-card">
+              <img src="assets/referencje/ref1%20.jpg" alt="Referencje 1" loading="lazy" />
+              <figcaption>Referencje 1</figcaption>
+            </figure>
+            <figure class="refs-card">
+              <img src="assets/referencje/ref2.jpg" alt="Referencje 2" loading="lazy" />
+              <figcaption>Referencje 2</figcaption>
+            </figure>
+            <figure class="refs-card">
+              <img src="assets/referencje/ref3.jpg" alt="Referencje 3" loading="lazy" />
+              <figcaption>Referencje 3</figcaption>
+            </figure>
+            <figure class="refs-card">
+              <img src="assets/referencje/ref4.jpg" alt="Referencje 4" loading="lazy" />
+              <figcaption>Referencje 4</figcaption>
+            </figure>
+            <figure class="refs-card">
+              <img src="assets/referencje/ref5.jpg" alt="Referencje 5" loading="lazy" />
+              <figcaption>Referencje 5</figcaption>
+            </figure>
+            <figure class="refs-card">
+              <img src="assets/referencje/ref6.jpg" alt="Referencje 6" loading="lazy" />
+              <figcaption>Referencje 6</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+	    <footer class="site-footer" data-site-footer></footer>
+
+    <script src="site.js"></script>
+  </body>
+</html>

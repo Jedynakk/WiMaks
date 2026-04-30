@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <title>WiMaks | Generalny wykonawca i projektant inwestycji budowlanych</title>
+	    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+	    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+	    <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48.png" />
+	    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+	    <meta
+	      name="description"
+	      content="WiMaks działa od 2007 roku jako generalny wykonawca i projektant inwestycji budowlanych. Realizujemy inwestycje publiczne, przemysłowe i mieszkaniowe na terenie całej Polski."
+	    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="#top" aria-label="Strona główna WiMaks">
+          <img
+            class="brand-logo"
+            src="assets/LogoWiMaks.png"
+            alt="WiMaks"
+          />
+        </a>
+        <nav class="main-nav" aria-label="Nawigacja główna">
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            data-nav-overlay-open
+            aria-haspopup="dialog"
+            aria-controls="nav-overlay"
+            aria-expanded="false"
+          >
+            O nas <span class="nav-caret" aria-hidden="true"></span>
+          </button>
+          <a href="portfolio.html">Realizacje</a>
+          <a href="podwykonawcy.html">Dla podwykonawców</a>
+          <a href="oferty-pracy.html">Oferty pracy</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <button
+          class="nav-mobile-toggle"
+          type="button"
+          data-nav-overlay-open
+          aria-haspopup="dialog"
+          aria-controls="nav-overlay"
+          aria-expanded="false"
+          aria-label="Otwórz menu"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16v2H4V7Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay" hidden>
+      <div class="nav-overlay-backdrop" data-nav-overlay-close></div>
+      <div class="nav-overlay-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <button class="nav-overlay-close" type="button" data-nav-overlay-close aria-label="Zamknij">
+          ×
+        </button>
+        <div class="nav-overlay-content">
+          <p class="eyebrow">O nas</p>
+          <div class="nav-overlay-cards" aria-label="Sekcje O nas">
+            <a class="nav-overlay-card" href="o-nas.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">O nas</span>
+                <span class="nav-overlay-desc">Informacje o firmie i skali realizacji.</span>
+              </div>
+            </a>
+            <a class="nav-overlay-card" href="portfolio.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 6h-4l-2-2H10L8 6H4v14h16V6Zm-2 12H6V8h12v10Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">Portfolio</span>
+                <span class="nav-overlay-desc">Wybrane realizacje oraz szczegóły projektów.</span>
+              </div>
+            </a>
+            <a class="nav-overlay-card" href="konsorcjum.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 11c1.7 0 3-1.3 3-3S17.7 5 16 5s-3 1.3-3 3 1.3 3 3 3ZM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3Zm0 2c-2.7 0-5 1.3-5 3v3h10v-3c0-1.7-2.3-3-5-3Zm8 0c-.3 0-.6 0-.9.1 1.2.8 1.9 1.8 1.9 2.9v3h6v-3c0-1.7-2.3-3-5-3Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">Konsorcjum</span>
+                <span class="nav-overlay-desc">Współpraca przy większych i złożonych inwestycjach.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="top">
+      <section class="hero-banner" aria-labelledby="hero-title">
+        <img
+          class="hero-banner-img"
+          src="assets/baner.jpg"
+          alt="Wybrana realizacja WiMaks"
+          loading="eager"
+        />
+        <div class="container hero-banner-inner">
+          <div class="hero-banner-copy">
+            <p class="eyebrow">Od 2007 roku</p>
+            <h1 id="hero-title">Generalny wykonawca i projektant inwestycji budowlanych</h1>
+            <p class="hero-banner-sub">
+              Inwestycje publiczne, przemysłowe i mieszkaniowe. Kompleksowo - od projektu po wykonanie.
+            </p>
+          </div>
+        </div>
+      </section>
+
+		      <section class="metrics section section-alt metrics-trust" aria-labelledby="metrics-title">
+		        <div class="container">
+		          <div class="metrics-layout">
+		            <header class="metrics-copy">
+		              <p class="eyebrow">WiMAKS</p>
+		              <h2 id="metrics-title">Poznajmy się.</h2>
+		              <p class="metrics-note">Od 2007 roku realizujemy inwestycje w całej Polsce - projektujemy, koordynujemy i wykonujemy.</p>
+		              <p class="company-lead">
+		                Łączymy doświadczenie zespołu, sprawną organizację i wysokie standardy jakości. Do każdego projektu podchodzimy
+		                indywidualnie - tak, aby dostarczyć rozwiązania dopasowane do potrzeb inwestora i specyfiki obiektu.
+		              </p>
+			              <div class="company-highlights" aria-label="Nasze wartości">
+			                <article class="company-value">
+			                  <h3>Nasz cel</h3>
+			                  <p>Dostarczać rozwiązania, które działają w praktyce - terminowo, bezpiecznie i w uzgodnionym standardzie.</p>
+			                </article>
+			              </div>
+		              <div class="stats-list" aria-label="Kluczowe dane" data-countup-root>
+		                <div class="stat-item">
+		                  <p class="stat-value" data-countup="19">19</p>
+		                  <p class="stat-label">lat doświadczenia</p>
+	                </div>
+	                <div class="stat-item">
+	                  <p class="stat-value" data-countup="100" data-suffix="+">100+</p>
+	                  <p class="stat-label">realizacji</p>
+	                </div>
+	                <div class="stat-item">
+	                  <p class="stat-value">Cała Polska</p>
+	                  <p class="stat-label">projekty w wielu regionach kraju</p>
+	                </div>
+		              </div>
+		            </header>
+		            <div class="metrics-right">
+		              <div class="company-carousel metrics-carousel" data-carousel aria-label="Wyróżnienia - galeria">
+		                <div class="carousel-viewport">
+		                  <div class="carousel-track">
+		                    <figure class="carousel-slide">
+		                      <img src="assets/diamenty-forbsa-2023.jpg" alt="Diamenty Forbesa 2023 - wyróżnienie" loading="lazy" />
+		                    </figure>
+		                  </div>
+		                </div>
+		                <div class="carousel-controls" hidden></div>
+		              </div>
+	            </div>
+		          </div>
+		        </div>
+		      </section>
+
+	      <section class="services section" id="services" aria-labelledby="services-title">
+	        <div class="container">
+			          <div class="split-heading">
+			            <div>
+			              <p class="eyebrow">Zakres usług</p>
+			              <h2 id="services-title">Projektowanie i wykonawstwo w jednym miejscu.</h2>
+			              <p class="services-subtitle">
+			                Od projektu, przez koordynację, po odbiory - z harmonogramem i kontrolą jakości.
+			              </p>
+			            </div>
+			          </div>
+			          <div class="services-cards" aria-label="Usługi">
+			            <article class="services-card">
+			              <div class="services-card-icon" aria-hidden="true">
+			                <img src="assets/building_1412048.png" alt="" loading="lazy" />
+			              </div>
+			              <h3>Budownictwo</h3>
+			              <p>Budowy, modernizacje, remonty oraz termomodernizacje obiektów.</p>
+			            </article>
+
+			            <article class="services-card">
+			              <div class="services-card-icon" aria-hidden="true">
+			                <img src="assets/allen-key_8676681.png" alt="" loading="lazy" />
+			              </div>
+			              <h3>Instalacje</h3>
+			              <p>Instalacje sanitarne, wentylacja i klimatyzacja - pełny zakres prac.</p>
+			            </article>
+
+			            <article class="services-card">
+			              <div class="services-card-icon" aria-hidden="true">
+			                <img src="assets/monitor_1314193.png" alt="" loading="lazy" />
+			              </div>
+			              <h3>Elektryka i teletechnika</h3>
+			              <p>Instalacje elektryczne oraz systemy niskoprądowe i teletechniczne.</p>
+			            </article>
+
+			            <article class="services-card">
+			              <div class="services-card-icon" aria-hidden="true">
+			                <img src="assets/interior_18701678.png" alt="" loading="lazy" />
+			              </div>
+			              <h3>Wyposażenie wnętrz</h3>
+			              <p>Wykończenie i wyposażenie przestrzeni - od układu po detale.</p>
+			            </article>
+
+			            <article class="services-card">
+			              <div class="services-card-icon" aria-hidden="true">
+			                <img src="assets/construction_6899781.png" alt="" loading="lazy" />
+			              </div>
+			              <h3>Konstrukcje i roboty budowlane</h3>
+			              <p>Żelbet, murowanie i konstrukcje stalowe - zgodnie z projektem i normami.</p>
+			            </article>
+
+			            <article class="services-card">
+			              <div class="services-card-icon" aria-hidden="true">
+			                <img src="assets/tool_16183381.png" alt="" loading="lazy" />
+			              </div>
+			              <h3>Prace towarzyszące</h3>
+			              <p>Roboty ziemne, dachowe, elewacyjne, drogowe i zagospodarowanie terenu.</p>
+			            </article>
+			          </div>
+
+			          <div class="services-secondary" aria-label="Dodatkowy zakres prac">
+			            <h3 class="services-secondary-title">Dodatkowo realizujemy</h3>
+			            <ul class="services-chips">
+			              <li>Roboty wykończeniowe</li>
+			              <li>Elementy wyposażenia</li>
+			              <li>Stolarka drewniana i PCV</li>
+			              <li>Stolarka aluminiowa</li>
+			              <li>Instalacje sieciowe</li>
+			            </ul>
+			          </div>
+	        </div>
+	      </section>
+
+	      <section class="section section-alt" aria-labelledby="current-builds-title">
+	        <div class="container">
+	          <div class="section-heading">
+	            <p class="eyebrow">Obecnie budujemy</p>
+	            <h2 id="current-builds-title">Aktualnie realizowane inwestycje na terenie całej Polski.</h2>
+	          </div>
+	          <div class="build-list" role="list">
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">JAWOR</div>
+	              <div class="build-desc">
+	                Budowa zespołu budynków mieszkalnych wielorodzinnych przy ul. Mickiewicza z garażami podziemnymi,
+	                dojściami, dojazdami i infrastrukturą techniczną.
+	              </div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">KOLUSZKI</div>
+	              <div class="build-desc">Budowa dworca kolejowego.</div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">BRWINÓW</div>
+	              <div class="build-desc">Przebudowa dworca kolejowego w systemie projektuj i buduj.</div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">Gmina IZABELIN</div>
+	              <div class="build-desc">Budowa punktu selektywnej zbiórki odpadów komunalnych.</div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">ZBROSZA DUŻA</div>
+	              <div class="build-desc">
+	                Opracowanie dokumentacji i budowa sali gimnastycznej na terenie Publicznej Szkoły Podstawowej
+	                im. ks. Czesława Sadłowskiego.
+	              </div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">TARCZYN</div>
+	              <div class="build-desc">Rozbudowa SPZOZ.</div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">OTWOCK</div>
+	              <div class="build-desc">
+	                Przebudowa skrzydła zachodniego i centralnego Pawilonu Głównego przy ul. Reymonta.
+	              </div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">JÓZEFÓW</div>
+	              <div class="build-desc">Budowa dwóch budynków mieszkalnych wielorodzinnych przy ul. Wiązowskiej.</div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">JÓZEFÓW (gmina Ożarów Mazowiecki)</div>
+	              <div class="build-desc">
+	                Rewitalizacja zabytkowych budynków poprzemysłowych na cele społeczne przy ul. Fabrycznej.
+	              </div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">WALENDÓW</div>
+	              <div class="build-desc">Budowa budynków B3 i A9.</div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">m.st. Warszawa - Dzielnica Rembertów</div>
+	              <div class="build-desc">Budowa budynku mieszkalnego wielorodzinnego przy ul. Cyrulików.</div>
+	            </div>
+	            <div class="build-row" role="listitem">
+	              <div class="build-place">GDAŃSK</div>
+	              <div class="build-desc">
+	                Budowa w stanie deweloperskim budynku mieszkalnego wielorodzinnego przy ul. Malczewskiego wraz z
+	                przynależnym terenem i infrastrukturą.
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </section>
+
+      <section class="projects section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="projects-header">
+            <div>
+              <p class="eyebrow">Portfolio</p>
+              <h2 id="projects-title">Wybrane realizacje</h2>
+            </div>
+            <a class="inline-link" href="portfolio.html">Zobacz więcej</a>
+          </div>
+          <div class="projects-mosaic">
+            <a class="mosaic-card" href="portfolio-pkp-olszynka-grochowska.html">
+              <img src="assets/PKP/PKP%20Olszynka%20Grochowska%202.jpg" alt="PKP Olszynka Grochowska" loading="lazy" />
+              <div class="mosaic-meta">
+                <span class="mosaic-title">PKP Olszynka Grochowska</span>
+                <span class="mosaic-sub">Budynki użyteczności publicznej</span>
+              </div>
+            </a>
+            <a class="mosaic-card" href="portfolio-szkola-muzyczna-moniuszki.html">
+              <img src="assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg" alt="Szkoła muzyczna - ul. Moniuszki, Warszawa" loading="lazy" />
+              <div class="mosaic-meta">
+                <span class="mosaic-title">Szkoła Muzyczna (Warszawa)</span>
+                <span class="mosaic-sub">Obiekt edukacyjny</span>
+              </div>
+            </a>
+            <a class="mosaic-card" href="portfolio-walendow-osiedle.html">
+              <img src="assets/Walendow%20osiedle%202.jpg" alt="Walendów - osiedle" loading="lazy" />
+              <div class="mosaic-meta">
+                <span class="mosaic-title">Walendów - osiedle</span>
+                <span class="mosaic-sub">Budownictwo mieszkaniowe</span>
+              </div>
+            </a>
+            <a class="mosaic-card" href="portfolio-sp271-warszawa.html">
+              <img src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg" alt="SP 271 - Warszawa" loading="lazy" />
+              <div class="mosaic-meta">
+                <span class="mosaic-title">SP nr 271 (Warszawa)</span>
+                <span class="mosaic-sub">Obiekt edukacyjny</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+	    </main>
+
+	    <footer class="site-footer" data-site-footer></footer>
+    <script src="site.js"></script>
+  </body>
+</html>

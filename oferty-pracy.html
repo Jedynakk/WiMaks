@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <title>WiMaks | Oferty pracy</title>
+	    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+	    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+	    <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48.png" />
+	    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+	    <meta
+	      name="description"
+	      content="Aktualne oferty pracy w WiMaks. Sprawdź stanowiska Kierownik budowy i Inżynier budowy oraz dołącz do zespołu realizującego inwestycje budowlane."
+	    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="index.html" aria-label="Strona główna WiMaks">
+          <img class="brand-logo" src="assets/LogoWiMaks.png" alt="WiMaks" />
+        </a>
+        <nav class="main-nav" aria-label="Nawigacja główna">
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            data-nav-overlay-open
+            aria-haspopup="dialog"
+            aria-controls="nav-overlay"
+            aria-expanded="false"
+          >
+            O nas <span class="nav-caret" aria-hidden="true"></span>
+          </button>
+          <a href="portfolio.html">Realizacje</a>
+          <a href="podwykonawcy.html">Dla podwykonawców</a>
+          <a href="oferty-pracy.html">Oferty pracy</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <button
+          class="nav-mobile-toggle"
+          type="button"
+          data-nav-overlay-open
+          aria-haspopup="dialog"
+          aria-controls="nav-overlay"
+          aria-expanded="false"
+          aria-label="Otwórz menu"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16v2H4V7Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay" hidden>
+      <div class="nav-overlay-backdrop" data-nav-overlay-close></div>
+      <div class="nav-overlay-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <button class="nav-overlay-close" type="button" data-nav-overlay-close aria-label="Zamknij">
+          ×
+        </button>
+        <div class="nav-overlay-content">
+          <p class="eyebrow">O nas</p>
+          <div class="nav-overlay-cards" aria-label="Sekcje O nas">
+            <a class="nav-overlay-card" href="o-nas.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">O nas</span>
+                <span class="nav-overlay-desc">Informacje o firmie i skali realizacji.</span>
+              </div>
+            </a>
+            <a class="nav-overlay-card" href="portfolio.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 6h-4l-2-2H10L8 6H4v14h16V6Zm-2 12H6V8h12v10Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">Portfolio</span>
+                <span class="nav-overlay-desc">Wybrane realizacje oraz szczegóły projektów.</span>
+              </div>
+            </a>
+            <a class="nav-overlay-card" href="konsorcjum.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 11c1.7 0 3-1.3 3-3S17.7 5 16 5s-3 1.3-3 3 1.3 3 3 3ZM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3Zm0 2c-2.7 0-5 1.3-5 3v3h10v-3c0-1.7-2.3-3-5-3Zm8 0c-.3 0-.6 0-.9.1 1.2.8 1.9 1.8 1.9 2.9v3h6v-3c0-1.7-2.3-3-5-3Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">Konsorcjum</span>
+                <span class="nav-overlay-desc">Współpraca przy większych i złożonych inwestycjach.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section contact-intro-section">
+        <div class="container jobs-intro-grid">
+          <div class="contact-intro-copy jobs-intro-copy">
+            <p class="eyebrow">Oferty pracy</p>
+            <h1>Dołącz do zespołu realizującego ciekawe inwestycje budowlane.</h1>
+            <p class="contact-intro-text">
+              Jesteśmy firmą wykonawczą działającą w branży budowlanej, o szerokim
+              wachlarzu usług. W związku z dynamicznym rozwojem firmy chcemy
+              poszerzyć naszą kadrę o ambitne i odpowiedzialne osoby, które chcą
+              uczestniczyć w realizacji ciekawych obiektów.
+            </p>
+          </div>
+          <div class="content-card jobs-intro-card">
+            <span class="contact-label">Obecnie rekrutujemy</span>
+            <div class="jobs-summary-list">
+              <article>
+                <strong>Kierownik budowy</strong>
+                <p>Gdańsk</p>
+              </article>
+              <article>
+                <strong>Inżynier budowy</strong>
+                <p>Gdańsk</p>
+              </article>
+              <article>
+                <strong>Kierownik budowy</strong>
+                <p>Czadrów</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" aria-labelledby="jobs-list-title">
+        <div class="container">
+          <div class="section-heading section-heading-left jobs-section-heading">
+            <p class="eyebrow">Aktualne ogłoszenia</p>
+            <h2 id="jobs-list-title">Prowadzimy nabór na następujące stanowiska.</h2>
+          </div>
+
+          <div class="jobs-filter-bar" aria-label="Filtry ofert pracy">
+            <label class="jobs-filter-field">
+              <span>Stanowisko</span>
+              <select id="job-role-filter">
+                <option value="">Wszystkie stanowiska</option>
+                <option value="Kierownik budowy">Kierownik budowy</option>
+                <option value="Inżynier budowy">Inżynier budowy</option>
+              </select>
+            </label>
+            <label class="jobs-filter-field">
+              <span>Miejscowość</span>
+              <select id="job-location-filter">
+                <option value="">Wszystkie miejscowości</option>
+                <option value="Gdańsk">Gdańsk</option>
+                <option value="Czadrów">Czadrów</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="jobs-results-meta">
+            <p id="jobs-results-count">Liczba ofert: 3</p>
+          </div>
+
+          <div class="jobs-list" id="jobs-list">
+            <article class="job-card" data-role="Kierownik budowy" data-location="Gdańsk">
+              <div class="job-card-topbar">
+                <span class="job-badge">Aktywna rekrutacja</span>
+                <button
+                  class="job-link"
+                  type="button"
+                  data-apply-button
+                  data-role="Kierownik budowy"
+                  data-location="Gdańsk"
+                >
+                  Aplikuj
+                </button>
+              </div>
+              <div class="job-card-header">
+                <div class="job-title-group">
+                  <span class="contact-label">Stanowisko</span>
+                  <h3>Kierownik budowy</h3>
+                  <div class="job-meta-chips">
+                    <span class="job-chip job-chip-location">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+                      </svg>
+                      Gdańsk
+                    </span>
+                    <span class="job-chip job-chip-contract">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 3h8l4 4v14H7V3Zm8 1.5V8h3.5L15 4.5ZM9 11h8v-2H9v2Zm0 4h8v-2H9v2Zm0 4h5v-2H9v2Z"/>
+                      </svg>
+                      Umowa o pracę
+                    </span>
+                    <span class="job-chip job-chip-building">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z"/>
+                      </svg>
+                      Branża budowlana
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="job-card-grid">
+                <section class="job-panel">
+                  <h4>Obowiązki</h4>
+                  <ul class="job-list">
+                    <li>Realizacja inwestycji zgodnie z przyjętym harmonogramem, dokumentacją techniczną oraz Prawem Budowlanym.</li>
+                    <li>Terminowa i jakościowa realizacja kontraktów zgodnie z dokumentacją techniczną, budżetem i harmonogramem.</li>
+                    <li>Miesięczne rozliczenie inwestycji.</li>
+                    <li>Uczestniczenie w rozliczaniu prac podwykonawców w oparciu o wymagania kontraktu.</li>
+                    <li>Opracowywanie dokumentów niezbędnych do realizacji kontraktu, w tym raportów z przebiegu prac na budowie.</li>
+                    <li>Udział w naradach koordynacyjnych, odbiorach częściowych i końcowych realizowanych inwestycji.</li>
+                    <li>Koordynowanie zamówień materiałów, sprzętu, transportu i usług.</li>
+                    <li>Współpraca z inwestorem, projektantami, inspektorami nadzoru oraz innymi uczestnikami procesu budowlanego.</li>
+                  </ul>
+                </section>
+                <section class="job-panel">
+                  <h4>Wymagania</h4>
+                  <ul class="job-list">
+                    <li>Wykształcenie wyższe techniczne.</li>
+                    <li>Minimum 2-letnie doświadczenie w pracy na podobnym stanowisku.</li>
+                    <li>Wielozadaniowość i odpowiedzialność za powierzone obowiązki.</li>
+                    <li>Znajomość pakietu MS Office.</li>
+                    <li>Prawo jazdy kat. B.</li>
+                  </ul>
+                </section>
+                <section class="job-panel">
+                  <h4>Oferujemy</h4>
+                  <ul class="job-list">
+                    <li>Umowę o pracę.</li>
+                    <li>Możliwość pracy w prężnie rozwijającej się firmie wykonawczej oraz udział w ciekawych projektach budowlanych.</li>
+                    <li>Pracę w przyjaznym zespole.</li>
+                    <li>Sprzęt niezbędny do pracy.</li>
+                    <li>Dużą samodzielność w realizacji zadań.</li>
+                  </ul>
+                </section>
+              </div>
+            </article>
+
+            <article class="job-card" data-role="Inżynier budowy" data-location="Gdańsk">
+              <div class="job-card-topbar">
+                <span class="job-badge">Aktywna rekrutacja</span>
+                <button
+                  class="job-link"
+                  type="button"
+                  data-apply-button
+                  data-role="Inżynier budowy"
+                  data-location="Gdańsk"
+                >
+                  Aplikuj
+                </button>
+              </div>
+              <div class="job-card-header">
+                <div class="job-title-group">
+                  <span class="contact-label">Stanowisko</span>
+                  <h3>Inżynier budowy</h3>
+                  <div class="job-meta-chips">
+                    <span class="job-chip job-chip-location">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+                      </svg>
+                      Gdańsk
+                    </span>
+                    <span class="job-chip job-chip-contract">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 3h8l4 4v14H7V3Zm8 1.5V8h3.5L15 4.5ZM9 11h8v-2H9v2Zm0 4h8v-2H9v2Zm0 4h5v-2H9v2Z"/>
+                      </svg>
+                      Umowa o pracę
+                    </span>
+                    <span class="job-chip job-chip-building">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z"/>
+                      </svg>
+                      Wsparcie budowy
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="job-card-grid">
+                <section class="job-panel">
+                  <h4>Obowiązki</h4>
+                  <ul class="job-list">
+                    <li>Bezpośrednia współpraca z kierownictwem budowy.</li>
+                    <li>Terminowa i jakościowa realizacja robót budowlanych zgodnie z dokumentacją techniczną, budżetem i harmonogramem.</li>
+                    <li>Wykonywanie i prowadzenie dokumentacji związanej z prowadzeniem budów, w tym dokumentacji powykonawczej i protokołów odbiorów.</li>
+                    <li>Analiza dokumentacji technicznej.</li>
+                    <li>Pomoc w prowadzeniu dokumentacji budowy.</li>
+                    <li>Składanie zamówień materiałowych na podstawie projektów i nadzór nad dostawcami materiałów budowlanych.</li>
+                    <li>Cykliczne raportowanie postępów określonych robót do kadry nadzorującej budowę.</li>
+                  </ul>
+                </section>
+                <section class="job-panel">
+                  <h4>Wymagania</h4>
+                  <ul class="job-list">
+                    <li>Wykształcenie minimum średnie techniczne, preferowane osoby z tytułem inżyniera.</li>
+                    <li>Minimum 2-letnie doświadczenie w pracy na podobnym stanowisku.</li>
+                    <li>Prawo jazdy kat. B i własny samochód.</li>
+                    <li>Dokładność, skrupulatność, precyzja i dbałość o szczegóły.</li>
+                    <li>Komunikatywność, asertywność, pewność siebie i umiejętności interpersonalne.</li>
+                    <li>Dobra organizacja pracy oraz punktualność.</li>
+                  </ul>
+                </section>
+                <section class="job-panel">
+                  <h4>Oferujemy</h4>
+                  <ul class="job-list">
+                    <li>Umowę o pracę.</li>
+                    <li>Możliwość pracy w prężnie rozwijającej się firmie wykonawczej oraz udział w ciekawych projektach budowlanych.</li>
+                    <li>Pracę w przyjaznym zespole.</li>
+                    <li>Sprzęt niezbędny do pracy.</li>
+                    <li>Dużą samodzielność w realizacji zadań.</li>
+                  </ul>
+                </section>
+              </div>
+            </article>
+
+            <article class="job-card" data-role="Kierownik budowy" data-location="Czadrów">
+              <div class="job-card-topbar">
+                <span class="job-badge">Aktywna rekrutacja</span>
+                <button
+                  class="job-link"
+                  type="button"
+                  data-apply-button
+                  data-role="Kierownik budowy"
+                  data-location="Czadrów"
+                >
+                  Aplikuj
+                </button>
+              </div>
+              <div class="job-card-header">
+                <div class="job-title-group">
+                  <span class="contact-label">Stanowisko</span>
+                  <h3>Kierownik budowy</h3>
+                  <div class="job-meta-chips">
+                    <span class="job-chip job-chip-location">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+                      </svg>
+                      Czadrów
+                    </span>
+                    <span class="job-chip job-chip-contract">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 3h8l4 4v14H7V3Zm8 1.5V8h3.5L15 4.5ZM9 11h8v-2H9v2Zm0 4h8v-2H9v2Zm0 4h5v-2H9v2Z"/>
+                      </svg>
+                      Umowa o pracę
+                    </span>
+                    <span class="job-chip job-chip-building">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z"/>
+                      </svg>
+                      Realizacja inwestycji
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="job-card-grid">
+                <section class="job-panel">
+                  <h4>Obowiązki</h4>
+                  <ul class="job-list">
+                    <li>Realizacja inwestycji zgodnie z przyjętym harmonogramem, dokumentacją techniczną oraz Prawem Budowlanym.</li>
+                    <li>Terminowa i jakościowa realizacja kontraktów zgodnie z dokumentacją techniczną, budżetem i harmonogramem.</li>
+                    <li>Miesięczne rozliczenie inwestycji.</li>
+                    <li>Uczestniczenie w rozliczaniu prac podwykonawców w oparciu o wymagania kontraktu.</li>
+                    <li>Opracowywanie dokumentów niezbędnych do realizacji kontraktu, w tym raportów z przebiegu prac na budowie.</li>
+                    <li>Udział w naradach koordynacyjnych, odbiorach częściowych i końcowych realizowanych inwestycji.</li>
+                    <li>Koordynowanie zamówień materiałów, sprzętu, transportu i usług.</li>
+                    <li>Współpraca z inwestorem, projektantami, inspektorami nadzoru oraz innymi uczestnikami procesu budowlanego.</li>
+                  </ul>
+                </section>
+                <section class="job-panel">
+                  <h4>Wymagania</h4>
+                  <ul class="job-list">
+                    <li>Wykształcenie wyższe techniczne.</li>
+                    <li>Minimum 2-letnie doświadczenie w pracy na podobnym stanowisku.</li>
+                    <li>Wielozadaniowość i odpowiedzialność za powierzone obowiązki.</li>
+                    <li>Znajomość pakietu MS Office.</li>
+                    <li>Prawo jazdy kat. B.</li>
+                  </ul>
+                </section>
+                <section class="job-panel">
+                  <h4>Oferujemy</h4>
+                  <ul class="job-list">
+                    <li>Umowę o pracę.</li>
+                    <li>Możliwość pracy w prężnie rozwijającej się firmie wykonawczej oraz udział w ciekawych projektach budowlanych.</li>
+                    <li>Pracę w przyjaznym zespole.</li>
+                    <li>Sprzęt niezbędny do pracy.</li>
+                    <li>Dużą samodzielność w realizacji zadań.</li>
+                  </ul>
+                </section>
+              </div>
+            </article>
+          </div>
+
+          <div class="jobs-empty-state" id="jobs-empty-state" hidden>
+            <p>Brak ofert spełniających wybrane kryteria.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="recruitment-title">
+        <div class="container">
+          <div class="jobs-footer-grid">
+            <div class="content-card jobs-footer-card">
+              <p class="eyebrow">Etapy rekrutacji</p>
+              <h2 id="recruitment-title">Jak wygląda proces</h2>
+              <ol class="job-steps">
+                <li>Przesłanie CV</li>
+                <li>Spotkanie rekrutacyjne</li>
+                <li>Decyzja o współpracy</li>
+              </ol>
+              <p class="jobs-note">Dołącz do naszego zespołu i twórz z nami wyjątkową jakość.</p>
+            </div>
+
+            <div class="content-card jobs-footer-card">
+              <p class="eyebrow">Zgoda do aplikacji</p>
+              <h2>Informacja dla kandydatów</h2>
+              <p class="jobs-note">
+                Prosimy o przesłanie Państwa aplikacji wraz z następującą zgodą / zgodami:
+              </p>
+              <p class="jobs-consent">
+                Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbędnych do realizacji procesu rekrutacji, zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku oraz ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. U. 2018 poz.1000)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+	    <footer class="site-footer" data-site-footer></footer>
+
+    <div class="apply-modal" id="apply-modal" hidden>
+      <div class="apply-modal-backdrop" data-close-apply></div>
+      <div
+        class="apply-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="apply-modal-title"
+      >
+        <button class="apply-modal-close" type="button" aria-label="Zamknij" data-close-apply>
+          ×
+        </button>
+        <div class="apply-modal-copy">
+          <p class="eyebrow">Aplikuj</p>
+          <h2 id="apply-modal-title">Formularz aplikacyjny</h2>
+          <p>
+            Wypełnij formularz, dodaj CV i prześlij zgłoszenie na wybrane stanowisko.
+          </p>
+        </div>
+        <form
+          class="apply-form"
+          action="https://formsubmit.co/jedynak.spam@gmail.com"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <input type="hidden" name="_subject" value="Nowa aplikacja - WiMaks" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="stanowisko" id="apply-position" />
+          <input type="hidden" name="lokalizacja" id="apply-location" />
+
+          <label>
+            Imię i nazwisko
+            <input type="text" name="name" placeholder="Twoje imię i nazwisko" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" placeholder="twoj@email.pl" required />
+          </label>
+          <label>
+            Telefon
+            <input type="tel" name="phone" placeholder="+48 000 000 000" required />
+          </label>
+          <label>
+            Stanowisko
+            <input type="text" id="apply-position-visible" readonly />
+          </label>
+          <label>
+            Lokalizacja
+            <input type="text" id="apply-location-visible" readonly />
+          </label>
+          <label>
+            CV
+            <input type="file" name="attachment" accept=".pdf,.doc,.docx" required />
+          </label>
+          <label>
+            Dodatkowa wiadomość
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Napisz kilka słów o swoim doświadczeniu."
+            ></textarea>
+          </label>
+          <label class="apply-consent">
+            <input type="checkbox" name="consent" required />
+            <span>
+              Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb
+              procesu rekrutacji.
+            </span>
+          </label>
+          <p class="apply-note">
+            Zgłoszenia są kierowane na adres `jedynak.spam@gmail.com`. Przy pierwszym
+            użyciu usługa może wysłać wiadomość z prośbą o potwierdzenie odbioru formularza.
+          </p>
+          <button class="button button-primary" type="submit">Wyślij aplikację</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const roleFilter = document.getElementById("job-role-filter");
+      const locationFilter = document.getElementById("job-location-filter");
+      const jobCards = Array.from(document.querySelectorAll(".job-card"));
+      const emptyState = document.getElementById("jobs-empty-state");
+      const resultsCount = document.getElementById("jobs-results-count");
+      const applyModal = document.getElementById("apply-modal");
+      const applyButtons = Array.from(document.querySelectorAll("[data-apply-button]"));
+      const closeApplyButtons = Array.from(document.querySelectorAll("[data-close-apply]"));
+      const applyPosition = document.getElementById("apply-position");
+      const applyLocation = document.getElementById("apply-location");
+      const applyPositionVisible = document.getElementById("apply-position-visible");
+      const applyLocationVisible = document.getElementById("apply-location-visible");
+
+      function filterJobs() {
+        const selectedRole = roleFilter.value;
+        const selectedLocation = locationFilter.value;
+
+        let visibleCount = 0;
+
+        jobCards.forEach((card) => {
+          const roleMatches = !selectedRole || card.dataset.role === selectedRole;
+          const locationMatches =
+            !selectedLocation || card.dataset.location === selectedLocation;
+          const isVisible = roleMatches && locationMatches;
+
+          card.hidden = !isVisible;
+
+          if (isVisible) {
+            visibleCount += 1;
+          }
+        });
+
+        resultsCount.textContent = "Liczba ofert: " + visibleCount;
+        emptyState.hidden = visibleCount !== 0;
+      }
+
+      roleFilter.addEventListener("change", filterJobs);
+      locationFilter.addEventListener("change", filterJobs);
+
+      function openApplyModal(role, location) {
+        applyPosition.value = role;
+        applyLocation.value = location;
+        applyPositionVisible.value = role;
+        applyLocationVisible.value = location;
+        applyModal.hidden = false;
+        document.body.classList.add("modal-open");
+      }
+
+      function closeApplyModal() {
+        applyModal.hidden = true;
+        document.body.classList.remove("modal-open");
+      }
+
+      applyButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          openApplyModal(button.dataset.role, button.dataset.location);
+        });
+      });
+
+      closeApplyButtons.forEach((button) => {
+        button.addEventListener("click", closeApplyModal);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !applyModal.hidden) {
+          closeApplyModal();
+        }
+      });
+    </script>
+    <script src="site.js"></script>
+  </body>
+</html>
