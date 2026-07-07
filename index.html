@@ -12,14 +12,14 @@
 	      name="description"
 	      content="WiMaks działa od 2007 roku jako generalny wykonawca i projektant inwestycji budowlanych. Realizujemy inwestycje publiczne, przemysłowe i mieszkaniowe na terenie całej Polski."
 	    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+	    <link rel="preconnect" href="https://fonts.googleapis.com" />
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	    <link
+	      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap"
+	      rel="stylesheet"
+	    />
+	    <link rel="stylesheet" href="styles.css?v=20260528-1" />
+	  </head>
   <body>
     <header class="site-header">
       <div class="container nav-row">
@@ -40,12 +40,13 @@
             aria-expanded="false"
           >
             O nas <span class="nav-caret" aria-hidden="true"></span>
-          </button>
-          <a href="portfolio.html">Realizacje</a>
-          <a href="podwykonawcy.html">Dla podwykonawców</a>
-          <a href="oferty-pracy.html">Oferty pracy</a>
-          <a href="kontakt.html">Kontakt</a>
-        </nav>
+	          </button>
+	          <a href="Realizacje.html">Realizacje</a>
+	          <a href="oferta.html">Oferta</a>
+	          <a href="podwykonawcy.html">Dla podwykonawców</a>
+	          <a href="oferty-pracy.html">Oferty pracy</a>
+	          <a href="kontakt.html">Kontakt</a>
+	        </nav>
         <button
           class="nav-mobile-toggle"
           type="button"
@@ -82,14 +83,14 @@
                 <span class="nav-overlay-desc">Informacje o firmie i skali realizacji.</span>
               </div>
             </a>
-            <a class="nav-overlay-card" href="portfolio.html">
+            <a class="nav-overlay-card" href="Realizacje.html">
               <div class="nav-overlay-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M20 6h-4l-2-2H10L8 6H4v14h16V6Zm-2 12H6V8h12v10Z" />
                 </svg>
               </div>
               <div>
-                <span class="nav-overlay-title">Portfolio</span>
+                <span class="nav-overlay-title">Realizacje</span>
                 <span class="nav-overlay-desc">Wybrane realizacje oraz szczegóły projektów.</span>
               </div>
             </a>
@@ -111,12 +112,12 @@
 
     <main id="top">
       <section class="hero-banner" aria-labelledby="hero-title">
-        <img
-          class="hero-banner-img"
-          src="assets/baner.jpg"
-          alt="Wybrana realizacja WiMaks"
-          loading="eager"
-        />
+	        <img
+	          class="hero-banner-img"
+	          src="assets/baner.jpg"
+	          alt="Wybrana realizacja WiMaks"
+	          loading="eager"
+	        />
         <div class="container hero-banner-inner">
           <div class="hero-banner-copy">
             <p class="eyebrow">Od 2007 roku</p>
@@ -126,19 +127,56 @@
             </p>
           </div>
         </div>
-      </section>
+	      </section>
 
-		      <section class="metrics section section-alt metrics-trust" aria-labelledby="metrics-title">
-		        <div class="container">
-		          <div class="metrics-layout">
-		            <header class="metrics-copy">
-		              <p class="eyebrow">WiMAKS</p>
-		              <h2 id="metrics-title">Poznajmy się.</h2>
-		              <p class="metrics-note">Od 2007 roku realizujemy inwestycje w całej Polsce - projektujemy, koordynujemy i wykonujemy.</p>
-		              <p class="company-lead">
-		                Łączymy doświadczenie zespołu, sprawną organizację i wysokie standardy jakości. Do każdego projektu podchodzimy
-		                indywidualnie - tak, aby dostarczyć rozwiązania dopasowane do potrzeb inwestora i specyfiki obiektu.
-		              </p>
+	      <section class="section section-alt areas-showcase" aria-labelledby="areas-showcase-title">
+	        <div class="container">
+	          <div class="section-heading">
+	            <p class="eyebrow">Doświadczenie</p>
+	            <h2 id="areas-showcase-title">Wybrane obszary realizacji</h2>
+	          </div>
+	          <div class="projects-mosaic areas-mosaic" aria-label="Wybrane obszary realizacji">
+	            <a class="mosaic-card" href="oferta.html#publiczne">
+	              <img src="assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg" alt="Inwestycja publiczna - szkoła muzyczna" loading="lazy" />
+	              <div class="mosaic-meta">
+	                <span class="mosaic-title">Inwestycje publiczne</span>
+	                <span class="mosaic-sub">Inwestycja publiczna - szkoła muzyczna</span>
+	                <span class="mosaic-cta" aria-hidden="true">Zobacz więcej</span>
+	              </div>
+	            </a>
+	            <a class="mosaic-card" href="oferta.html#przemysl">
+	              <img src="assets/PKP/PKP%20Olszynka%20Grochowska%201.jpg" alt="Inwestycja infrastrukturalna - realizacja kolejowa" loading="lazy" />
+	              <div class="mosaic-meta">
+	                <span class="mosaic-title">Przemysł i infrastruktura</span>
+	                <span class="mosaic-sub">Inwestycja infrastrukturalna - realizacja kolejowa</span>
+	                <span class="mosaic-cta" aria-hidden="true">Zobacz więcej</span>
+	              </div>
+	            </a>
+	            <a class="mosaic-card" href="oferta.html#mieszkaniowe">
+	              <img src="assets/Walendow%20osiedle%202.jpg" alt="Inwestycja mieszkaniowa - osiedle" loading="lazy" />
+	              <div class="mosaic-meta">
+	                <span class="mosaic-title">Inwestycje mieszkaniowe</span>
+	                <span class="mosaic-sub">Inwestycja mieszkaniowa - osiedle</span>
+	                <span class="mosaic-cta" aria-hidden="true">Zobacz więcej</span>
+	              </div>
+	            </a>
+	          </div>
+	        </div>
+	      </section>
+
+			      <section class="metrics section section-alt metrics-trust" aria-labelledby="metrics-title">
+			        <div class="container">
+			          <div class="metrics-layout">
+			            <header class="metrics-copy">
+				              <p class="eyebrow">WiMaks</p>
+			              <h2 id="metrics-title">Poznajmy się</h2>
+			              <p class="metrics-note">
+			                Od 2007 roku kompleksowo realizujemy inwestycje w całej Polsce — od projektu, przez koordynację, po wykonanie.
+			              </p>
+			              <p class="company-lead">
+			                Łączymy doświadczenie zespołu z konsekwentną organizacją prac i wysokimi standardami jakości. Każdy projekt
+			                prowadzimy z dbałością o harmonogram, bezpieczeństwo i transparentną komunikację.
+			              </p>
 			              <div class="company-highlights" aria-label="Nasze wartości">
 			                <article class="company-value">
 			                  <h3>Nasz cel</h3>
@@ -153,12 +191,12 @@
 	                <div class="stat-item">
 	                  <p class="stat-value" data-countup="100" data-suffix="+">100+</p>
 	                  <p class="stat-label">realizacji</p>
-	                </div>
-	                <div class="stat-item">
-	                  <p class="stat-value">Cała Polska</p>
-	                  <p class="stat-label">projekty w wielu regionach kraju</p>
-	                </div>
-		              </div>
+		                </div>
+		                <div class="stat-item">
+		                  <p class="stat-value stat-value-nowrap">Cała Polska</p>
+		                  <p class="stat-label">projekty na terenie całego kraju</p>
+		                </div>
+			              </div>
 		            </header>
 		            <div class="metrics-right">
 		              <div class="company-carousel metrics-carousel" data-carousel aria-label="Wyróżnienia - galeria">
@@ -221,7 +259,7 @@
 			            </article>
 
 			            <article class="services-card">
-			              <div class="services-card-icon" aria-hidden="true">
+a			              <div class="services-card-icon" aria-hidden="true">
 			                <img src="assets/construction_6899781.png" alt="" loading="lazy" />
 			              </div>
 			              <h3>Konstrukcje i roboty budowlane</h3>
@@ -237,132 +275,279 @@
 			            </article>
 			          </div>
 
-			          <div class="services-secondary" aria-label="Dodatkowy zakres prac">
-			            <h3 class="services-secondary-title">Dodatkowo realizujemy</h3>
-			            <ul class="services-chips">
-			              <li>Roboty wykończeniowe</li>
-			              <li>Elementy wyposażenia</li>
-			              <li>Stolarka drewniana i PCV</li>
-			              <li>Stolarka aluminiowa</li>
-			              <li>Instalacje sieciowe</li>
-			            </ul>
-			          </div>
+		          <div class="services-secondary" aria-label="Dodatkowy zakres prac">
+		            <h3 class="services-secondary-title">Dodatkowo realizujemy</h3>
+		            <ul class="services-chips">
+		              <li>Roboty wykończeniowe</li>
+		              <li>Elementy wyposażenia</li>
+		              <li>Stolarka drewniana i PCV</li>
+		              <li>Stolarka aluminiowa</li>
+		              <li>Instalacje sieciowe</li>
+		            </ul>
+		          </div>
 	        </div>
 	      </section>
 
+		
+
 	      <section class="section section-alt" aria-labelledby="current-builds-title">
 	        <div class="container">
-	          <div class="section-heading">
-	            <p class="eyebrow">Obecnie budujemy</p>
-	            <h2 id="current-builds-title">Aktualnie realizowane inwestycje na terenie całej Polski.</h2>
+	          <div class="section-heading section-heading-left">
+	            <p class="eyebrow">W trakcie realizacji</p>
+	            <h2 id="current-builds-title">Wybrane inwestycje, które prowadzimy obecnie w całej Polsce</h2>
 	          </div>
-	          <div class="build-list" role="list">
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">JAWOR</div>
-	              <div class="build-desc">
-	                Budowa zespołu budynków mieszkalnych wielorodzinnych przy ul. Mickiewicza z garażami podziemnymi,
-	                dojściami, dojazdami i infrastrukturą techniczną.
-	              </div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">KOLUSZKI</div>
-	              <div class="build-desc">Budowa dworca kolejowego.</div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">BRWINÓW</div>
-	              <div class="build-desc">Przebudowa dworca kolejowego w systemie projektuj i buduj.</div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">Gmina IZABELIN</div>
-	              <div class="build-desc">Budowa punktu selektywnej zbiórki odpadów komunalnych.</div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">ZBROSZA DUŻA</div>
-	              <div class="build-desc">
-	                Opracowanie dokumentacji i budowa sali gimnastycznej na terenie Publicznej Szkoły Podstawowej
-	                im. ks. Czesława Sadłowskiego.
-	              </div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">TARCZYN</div>
-	              <div class="build-desc">Rozbudowa SPZOZ.</div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">OTWOCK</div>
-	              <div class="build-desc">
-	                Przebudowa skrzydła zachodniego i centralnego Pawilonu Głównego przy ul. Reymonta.
-	              </div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">JÓZEFÓW</div>
-	              <div class="build-desc">Budowa dwóch budynków mieszkalnych wielorodzinnych przy ul. Wiązowskiej.</div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">JÓZEFÓW (gmina Ożarów Mazowiecki)</div>
-	              <div class="build-desc">
-	                Rewitalizacja zabytkowych budynków poprzemysłowych na cele społeczne przy ul. Fabrycznej.
-	              </div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">WALENDÓW</div>
-	              <div class="build-desc">Budowa budynków B3 i A9.</div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">m.st. Warszawa - Dzielnica Rembertów</div>
-	              <div class="build-desc">Budowa budynku mieszkalnego wielorodzinnego przy ul. Cyrulików.</div>
-	            </div>
-	            <div class="build-row" role="listitem">
-	              <div class="build-place">GDAŃSK</div>
-	              <div class="build-desc">
-	                Budowa w stanie deweloperskim budynku mieszkalnego wielorodzinnego przy ul. Malczewskiego wraz z
-	                przynależnym terenem i infrastrukturą.
-	              </div>
-	            </div>
-	          </div>
+		          <div class="build-list" role="list">
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Jawor</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Mieszkaniowa</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i koordynacja realizacji</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Zespół budynków mieszkalnych wielorodzinnych przy ul. Mickiewicza — z garażami podziemnymi oraz infrastrukturą.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Koluszki</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Infrastrukturalna</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i instalacyjne</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Dworzec kolejowy — realizacja w toku.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Brwinów</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Infrastrukturalna</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Projekt i realizacja (projektuj i buduj)</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Przebudowa dworca kolejowego w formule „projektuj i buduj”.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Izabelin (gmina)</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Komunalna</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i zagospodarowanie terenu</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Punkt selektywnej zbiórki odpadów komunalnych (PSZOK).</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Zbrosza Duża</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Publiczna / edukacyjna</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Dokumentacja projektowa i realizacja</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Dokumentacja i budowa sali gimnastycznej przy Publicznej Szkole Podstawowej im. ks. Czesława Sadłowskiego.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Tarczyn</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Publiczna / ochrony zdrowia</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i instalacyjne</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Rozbudowa SPZOZ.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Otwock</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Publiczna</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Przebudowa i prace modernizacyjne</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Przebudowa skrzydła zachodniego i centralnego Pawilonu Głównego przy ul. Reymonta.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Józefów</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Mieszkaniowa</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i instalacyjne</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Dwa budynki mieszkalne wielorodzinne przy ul. Wiązowskiej.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Józefów (gm. Ożarów Mazowiecki)</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Rewitalizacja</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i prace konserwatorskie</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Rewitalizacja zabytkowych budynków poprzemysłowych na cele społeczne przy ul. Fabrycznej.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Walendów</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Mieszkaniowa</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Budynki B3 i A9 — etap realizacji.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Warszawa (Rembertów)</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Mieszkaniowa</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i instalacyjne</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Budynek mieszkalny wielorodzinny przy ul. Cyrulików.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		            <div class="build-row" role="listitem">
+		              <div class="build-place">Gdańsk</div>
+		              <dl class="build-meta">
+		                <div class="build-meta-row">
+		                  <dt>Typ inwestycji</dt>
+		                  <dd>Mieszkaniowa</dd>
+		                </div>
+		                <div class="build-meta-row">
+		                  <dt>Zakres prac</dt>
+		                  <dd>Roboty budowlane i zagospodarowanie terenu</dd>
+		                </div>
+		                <div class="build-meta-row build-meta-desc">
+		                  <dt>Opis</dt>
+		                  <dd>Budynek mieszkalny wielorodzinny w stanie deweloperskim przy ul. Malczewskiego — z terenem i infrastrukturą.</dd>
+		                </div>
+		              </dl>
+		            </div>
+		          </div>
 	        </div>
 	      </section>
 
       <section class="projects section" id="projects" aria-labelledby="projects-title">
         <div class="container">
-          <div class="projects-header">
-            <div>
-              <p class="eyebrow">Portfolio</p>
-              <h2 id="projects-title">Wybrane realizacje</h2>
-            </div>
-            <a class="inline-link" href="portfolio.html">Zobacz więcej</a>
-          </div>
-          <div class="projects-mosaic">
-            <a class="mosaic-card" href="portfolio-pkp-olszynka-grochowska.html">
-              <img src="assets/PKP/PKP%20Olszynka%20Grochowska%202.jpg" alt="PKP Olszynka Grochowska" loading="lazy" />
-              <div class="mosaic-meta">
-                <span class="mosaic-title">PKP Olszynka Grochowska</span>
-                <span class="mosaic-sub">Budynki użyteczności publicznej</span>
-              </div>
-            </a>
-            <a class="mosaic-card" href="portfolio-szkola-muzyczna-moniuszki.html">
-              <img src="assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg" alt="Szkoła muzyczna - ul. Moniuszki, Warszawa" loading="lazy" />
-              <div class="mosaic-meta">
-                <span class="mosaic-title">Szkoła Muzyczna (Warszawa)</span>
-                <span class="mosaic-sub">Obiekt edukacyjny</span>
-              </div>
-            </a>
-            <a class="mosaic-card" href="portfolio-walendow-osiedle.html">
-              <img src="assets/Walendow%20osiedle%202.jpg" alt="Walendów - osiedle" loading="lazy" />
-              <div class="mosaic-meta">
-                <span class="mosaic-title">Walendów - osiedle</span>
-                <span class="mosaic-sub">Budownictwo mieszkaniowe</span>
-              </div>
-            </a>
-            <a class="mosaic-card" href="portfolio-sp271-warszawa.html">
-              <img src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg" alt="SP 271 - Warszawa" loading="lazy" />
-              <div class="mosaic-meta">
-                <span class="mosaic-title">SP nr 271 (Warszawa)</span>
-                <span class="mosaic-sub">Obiekt edukacyjny</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+	          <div class="projects-header">
+	            <div>
+	              <p class="eyebrow">Realizacje</p>
+	              <h2 id="projects-title">Wybrane realizacje</h2>
+	            </div>
+	          </div>
+		          <div class="projects-mosaic projects-mosaic-reveal">
+	            <a class="mosaic-card" href="Realizacje-pkp-olszynka-grochowska.html">
+	              <img src="assets/PKP/PKP%20Olszynka%20Grochowska%202.jpg" alt="PKP Olszynka Grochowska" loading="lazy" />
+		              <div class="mosaic-meta">
+		                <span class="mosaic-title">PKP Olszynka Grochowska</span>
+		                <span class="mosaic-sub">Budynki użyteczności publicznej</span>
+		              </div>
+		            </a>
+		            <a class="mosaic-card" href="Realizacje-szkola-muzyczna-moniuszki.html">
+		              <img src="assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg" alt="Szkoła muzyczna - ul. Moniuszki, Warszawa" loading="lazy" />
+		              <div class="mosaic-meta">
+		                <span class="mosaic-title">Szkoła Muzyczna im. Moniuszki</span>
+		                <span class="mosaic-sub">Obiekt edukacyjny</span>
+		              </div>
+		            </a>
+		            <a class="mosaic-card" href="Realizacje-walendow-osiedle.html">
+		              <img src="assets/Walendow%20osiedle%202.jpg" alt="Walendów - osiedle" loading="lazy" />
+		              <div class="mosaic-meta">
+		                <span class="mosaic-title">Walendów - osiedle</span>
+		                <span class="mosaic-sub">Budownictwo mieszkaniowe</span>
+		              </div>
+		            </a>
+		            <a class="mosaic-card" href="Realizacje-sp271-warszawa.html">
+		              <img src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg" alt="SP 271 - Warszawa" loading="lazy" />
+		              <div class="mosaic-meta">
+		                <span class="mosaic-title">Szkoła Podstawowa nr 271</span>
+		                <span class="mosaic-sub">Obiekt edukacyjny</span>
+		              </div>
+		            </a>
+		          </div>
+	          <div class="section-actions">
+	            <a class="inline-link" href="Realizacje.html">Zobacz więcej</a>
+	          </div>
+	        </div>
+	      </section>
 
 	    </main>
 

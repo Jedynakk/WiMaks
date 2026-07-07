@@ -3,8 +3,12 @@
     const overlay = document.getElementById("nav-overlay");
     if (!overlay) return;
 
-    const openButtons = Array.from(document.querySelectorAll("[data-nav-overlay-open]"));
-    const closeButtons = Array.from(document.querySelectorAll("[data-nav-overlay-close]"));
+    const openButtons = Array.from(
+      document.querySelectorAll("[data-nav-overlay-open]"),
+    );
+    const closeButtons = Array.from(
+      document.querySelectorAll("[data-nav-overlay-close]"),
+    );
     const focusableSelector =
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -40,20 +44,28 @@
               </div>
             </div>
 
-            <a class="nav-overlay-link" href="portfolio.html">Realizacje</a>
-            <a class="nav-overlay-link" href="podwykonawcy.html">Dla podwykonawców</a>
-            <a class="nav-overlay-link" href="oferty-pracy.html">Oferty pracy</a>
-            <a class="nav-overlay-link" href="kontakt.html">Kontakt</a>
-          </nav>
-        `;
+	            <a class="nav-overlay-link" href="Realizacje.html">Realizacje</a>
+	            <a class="nav-overlay-link" href="oferta.html">Oferta</a>
+	            <a class="nav-overlay-link" href="podwykonawcy.html">Dla podwykonawców</a>
+	            <a class="nav-overlay-link" href="oferty-pracy.html">Oferty pracy</a>
+	            <a class="nav-overlay-link" href="kontakt.html">Kontakt</a>
+	          </nav>
+	        `;
 
-        const accordionToggle = content.querySelector("[data-overlay-accordion]");
+        const accordionToggle = content.querySelector(
+          "[data-overlay-accordion]",
+        );
         const accordionPanel = content.querySelector("#nav-overlay-about");
-        if (accordionToggle instanceof HTMLButtonElement && accordionPanel instanceof HTMLElement) {
-          const initialExpanded = accordionToggle.getAttribute("aria-expanded") === "true";
+        if (
+          accordionToggle instanceof HTMLButtonElement &&
+          accordionPanel instanceof HTMLElement
+        ) {
+          const initialExpanded =
+            accordionToggle.getAttribute("aria-expanded") === "true";
           accordionPanel.toggleAttribute("hidden", !initialExpanded);
           accordionToggle.addEventListener("click", () => {
-            const nextState = accordionToggle.getAttribute("aria-expanded") !== "true";
+            const nextState =
+              accordionToggle.getAttribute("aria-expanded") !== "true";
             accordionToggle.setAttribute("aria-expanded", String(nextState));
             accordionPanel.toggleAttribute("hidden", !nextState);
           });
@@ -103,7 +115,9 @@
     }
 
     function setExpanded(isExpanded) {
-      openButtons.forEach((btn) => btn.setAttribute("aria-expanded", String(isExpanded)));
+      openButtons.forEach((btn) =>
+        btn.setAttribute("aria-expanded", String(isExpanded)),
+      );
     }
 
     function openOverlay() {
@@ -166,9 +180,9 @@
 
       if (event.key !== "Tab") return;
 
-      const focusables = Array.from(overlay.querySelectorAll(focusableSelector)).filter(
-        (el) => el.offsetParent !== null
-      );
+      const focusables = Array.from(
+        overlay.querySelectorAll(focusableSelector),
+      ).filter((el) => el.offsetParent !== null);
       if (focusables.length === 0) return;
 
       const first = focusables[0];
@@ -190,7 +204,9 @@
   }
 
   function initCountUps() {
-    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    const reducedMotion = window.matchMedia?.(
+      "(prefers-reduced-motion: reduce)",
+    )?.matches;
     const roots = Array.from(document.querySelectorAll("[data-countup-root]"));
     if (roots.length === 0) return;
 
@@ -249,7 +265,7 @@
           revealAndCount(root);
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.25 },
     );
 
     roots.forEach((root) => observer.observe(root));
@@ -284,8 +300,139 @@
     `;
   }
 
+  function initOfferTabs() {
+    const root = document.querySelector("[data-offer-tabs]");
+    if (!root) return;
+
+    const tabs = Array.from(root.querySelectorAll("[data-offer-tab]")).filter(
+      (el) => el instanceof HTMLAnchorElement,
+    );
+    const panels = Array.from(
+      document.querySelectorAll("[data-offer-panel]"),
+    ).filter((el) => el instanceof HTMLElement);
+    const blurb = document.querySelector("[data-offer-blurb]");
+
+    if (tabs.length === 0 || panels.length === 0) return;
+
+    const panelById = new Map(panels.map((p) => [p.id, p]));
+    const copyById = {
+      publiczne:
+        "W obszarze inwestycji publicznych realizujemy m.in. obiekty edukacyjne oraz zadania towarzyszące. Zapewniamy sprawne prowadzenie budowy, kontrolę jakości i terminową realizację przy jasnej komunikacji z inwestorem.",
+      przemysl:
+        "Realizujemy projekty przemysłowe i infrastrukturalne, gdzie kluczowe są harmonogram, logistyka i bezpieczeństwo. Prowadzimy prace przewidywalnie, z naciskiem na jakość wykonania i sprawną komunikację.",
+      mieszkaniowe:
+        "Realizujemy inwestycje mieszkaniowe — budynki wielorodzinne i osiedla. Dbamy o standard, detale i dobrą organizację robót, aby przekazanie obiektu przebiegło sprawnie i bez niespodzianek.",
+    };
+
+    function setActive(id) {
+      panels.forEach((p) => p.toggleAttribute("hidden", p.id !== id));
+      tabs.forEach((t) =>
+        t.classList.toggle("is-active", t.getAttribute("href") === `#${id}`),
+      );
+      if (blurb instanceof HTMLElement && id && id in copyById) {
+        blurb.textContent = copyById[id];
+      }
+    }
+
+    function readHash() {
+      const id = (window.location.hash || "").replace("#", "");
+      const next = id && panelById.has(id) ? id : "publiczne";
+      setActive(next);
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", (event) => {
+        event.preventDefault();
+        const href = tab.getAttribute("href") ?? "";
+        const id = href.startsWith("#") ? href.slice(1) : "";
+        if (!id || !panelById.has(id)) return;
+        history.replaceState(null, "", `#${id}`);
+        readHash();
+      });
+    });
+
+    window.addEventListener("hashchange", readHash);
+    readHash();
+  }
+
+  function initJobAccordions() {
+    const cards = Array.from(document.querySelectorAll(".job-card"));
+    if (cards.length === 0) return;
+
+    const reducedMotion = window.matchMedia?.(
+      "(prefers-reduced-motion: reduce)",
+    )?.matches;
+
+    cards.forEach((card) => {
+      if (!(card instanceof HTMLElement)) return;
+      const toggle = card.querySelector(".job-toggle");
+      if (!(toggle instanceof HTMLButtonElement)) return;
+
+      const detailsId = toggle.getAttribute("aria-controls") ?? "";
+      const details = detailsId ? document.getElementById(detailsId) : null;
+      if (!(details instanceof HTMLElement)) return;
+
+      let isAnimating = false;
+
+      function setExpanded(isExpanded, { animate = true } = {}) {
+        if (isAnimating) return;
+        toggle.setAttribute("aria-expanded", String(isExpanded));
+        card.classList.toggle("is-expanded", isExpanded);
+        const nextLabel = isExpanded ? "Ukryj szczegóły" : "Pokaż szczegóły";
+        const label = toggle.querySelector(".sr-only");
+        if (label) label.textContent = nextLabel;
+        const visible = toggle.querySelector(".job-toggle-text");
+        if (visible) visible.textContent = nextLabel;
+
+        if (!animate || reducedMotion) {
+          details.hidden = !isExpanded;
+          details.style.height = "";
+          details.style.overflow = "";
+          details.style.opacity = "";
+          return;
+        }
+
+        isAnimating = true;
+        details.hidden = false;
+        details.style.overflow = "hidden";
+
+        const startHeight = details.getBoundingClientRect().height;
+        const endHeight = isExpanded ? details.scrollHeight : 0;
+        const startOpacity = isExpanded ? 0 : 1;
+        const endOpacity = isExpanded ? 1 : 0;
+
+        details.style.height = `${startHeight}px`;
+        details.style.opacity = String(startOpacity);
+
+        requestAnimationFrame(() => {
+          details.style.transition = "height 260ms ease, opacity 220ms ease";
+          details.style.height = `${endHeight}px`;
+          details.style.opacity = String(endOpacity);
+
+          window.setTimeout(() => {
+            details.style.transition = "";
+            details.style.height = "";
+            details.style.overflow = "";
+            details.style.opacity = "";
+            details.hidden = !isExpanded;
+            isAnimating = false;
+          }, 280);
+        });
+      }
+
+      setExpanded(false, { animate: false });
+
+      toggle.addEventListener("click", () => {
+        const next = toggle.getAttribute("aria-expanded") !== "true";
+        setExpanded(next);
+      });
+    });
+  }
+
   function initCarousels() {
-    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    const reducedMotion = window.matchMedia?.(
+      "(prefers-reduced-motion: reduce)",
+    )?.matches;
     const carousels = Array.from(document.querySelectorAll("[data-carousel]"));
     if (carousels.length === 0) return;
 
@@ -353,12 +500,14 @@
       viewport.addEventListener(
         "scroll",
         () => {
-          const nextIndex = Math.round(viewport.scrollLeft / Math.max(1, viewport.clientWidth));
+          const nextIndex = Math.round(
+            viewport.scrollLeft / Math.max(1, viewport.clientWidth),
+          );
           if (nextIndex === index) return;
           index = Math.min(slides.length - 1, Math.max(0, nextIndex));
           render();
         },
-        { passive: true }
+        { passive: true },
       );
 
       carousel.addEventListener("keydown", (event) => {
@@ -380,7 +529,10 @@
           if (!(e instanceof PointerEvent)) return;
           active = true;
           startX = e.clientX;
-          (e.currentTarget instanceof HTMLElement ? e.currentTarget : viewport).setPointerCapture(e.pointerId);
+          (e.currentTarget instanceof HTMLElement
+            ? e.currentTarget
+            : viewport
+          ).setPointerCapture(e.pointerId);
         }
 
         function onPointerUp(e) {
@@ -410,7 +562,9 @@
       const mainImg = gallery.querySelector("[data-gallery-main]");
       if (!(mainImg instanceof HTMLImageElement)) return;
 
-      const buttons = Array.from(gallery.querySelectorAll("[data-gallery-src]"));
+      const buttons = Array.from(
+        gallery.querySelectorAll("[data-gallery-src]"),
+      );
       if (buttons.length === 0) return;
 
       function setActive(btn) {
@@ -441,8 +595,10 @@
     initNavOverlay();
     initCountUps();
     initFooter();
+    initOfferTabs();
     initCarousels();
     initGalleries();
+    initJobAccordions();
   }
 
   if (document.readyState === "loading") {

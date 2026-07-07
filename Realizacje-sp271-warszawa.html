@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <title>WiMaks | Szkoła Podstawowa nr 271 w Warszawie</title>
+	    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+	    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+	    <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48.png" />
+	    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+	    <meta
+	      name="description"
+	      content="Szkoła Podstawowa nr 271 w Warszawie - realizacja WiMaks przy ul. Poziomki 11."
+	    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260528-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="index.html" aria-label="Strona główna WiMaks">
+          <img class="brand-logo" src="assets/LogoWiMaks.png" alt="WiMaks" />
+        </a>
+        <nav class="main-nav" aria-label="Nawigacja główna">
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            data-nav-overlay-open
+            aria-haspopup="dialog"
+            aria-controls="nav-overlay"
+            aria-expanded="false"
+          >
+            O nas <span class="nav-caret" aria-hidden="true"></span>
+          </button>
+          <a href="Realizacje.html">Realizacje</a>
+          <a href="oferta.html">Oferta</a>
+          <a href="podwykonawcy.html">Dla podwykonawców</a>
+          <a href="oferty-pracy.html">Oferty pracy</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <button
+          class="nav-mobile-toggle"
+          type="button"
+          data-nav-overlay-open
+          aria-haspopup="dialog"
+          aria-controls="nav-overlay"
+          aria-expanded="false"
+          aria-label="Otwórz menu"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16v2H4V7Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay" hidden>
+      <div class="nav-overlay-backdrop" data-nav-overlay-close></div>
+      <div class="nav-overlay-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <button class="nav-overlay-close" type="button" data-nav-overlay-close aria-label="Zamknij">
+          ×
+        </button>
+        <div class="nav-overlay-content">
+          <p class="eyebrow">O nas</p>
+          <div class="nav-overlay-cards" aria-label="Sekcje O nas">
+            <a class="nav-overlay-card" href="o-nas.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">O nas</span>
+                <span class="nav-overlay-desc">Informacje o firmie i skali realizacji.</span>
+              </div>
+            </a>
+            <a class="nav-overlay-card" href="Realizacje.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 6h-4l-2-2H10L8 6H4v14h16V6Zm-2 12H6V8h12v10Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">Realizacje</span>
+                <span class="nav-overlay-desc">Wybrane realizacje oraz szczegóły projektów.</span>
+              </div>
+            </a>
+            <a class="nav-overlay-card" href="konsorcjum.html">
+              <div class="nav-overlay-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 11c1.7 0 3-1.3 3-3S17.7 5 16 5s-3 1.3-3 3 1.3 3 3 3ZM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3Zm0 2c-2.7 0-5 1.3-5 3v3h10v-3c0-1.7-2.3-3-5-3Zm8 0c-.3 0-.6 0-.9.1 1.2.8 1.9 1.8 1.9 2.9v3h6v-3c0-1.7-2.3-3-5-3Z" />
+                </svg>
+              </div>
+              <div>
+                <span class="nav-overlay-title">Konsorcjum</span>
+                <span class="nav-overlay-desc">Współpraca przy większych i złożonych inwestycjach.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="section contact-intro-section">
+        <div class="container project-detail-intro">
+          <p class="eyebrow">Realizacje</p>
+          <h1>Szkoła Podstawowa nr 271 w Warszawie</h1>
+          <p class="contact-intro-text">
+            Budowa szkoły podstawowej nr 271 przy ul. Poziomki 11 w Warszawie.
+          </p>
+        </div>
+      </section>
+	      <section class="section section-alt">
+	        <div class="container project-detail-grid">
+	          <div class="project-detail-media">
+	            <div class="project-gallery" data-gallery aria-label="Galeria zdjęć - SP nr 271 (Warszawa)">
+	              <figure class="project-gallery-main">
+	                <img
+	                  src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg"
+	                  alt="SP nr 271 (Warszawa) - zdjęcie główne"
+	                  loading="eager"
+	                  data-gallery-main
+	                />
+	              </figure>
+	              <div class="project-gallery-thumbs" aria-label="Pozostałe zdjęcia">
+	                <button
+	                  class="project-thumb"
+	                  type="button"
+	                  data-gallery-src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg"
+	                  data-gallery-alt="SP nr 271 (Warszawa) - zdjęcie 1"
+	                  aria-label="Pokaż zdjęcie 1"
+	                >
+	                  <img src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg" alt="" loading="lazy" />
+	                </button>
+	                <button
+	                  class="project-thumb"
+	                  type="button"
+	                  data-gallery-src="assets/SP271/unnamed.webp"
+	                  data-gallery-alt="SP nr 271 (Warszawa) - zdjęcie 2"
+	                  aria-label="Pokaż zdjęcie 2"
+	                >
+	                  <img src="assets/SP271/unnamed.webp" alt="" loading="lazy" />
+	                </button>
+	                <button
+	                  class="project-thumb"
+	                  type="button"
+	                  data-gallery-src="assets/SP271/unnamed (1).webp"
+	                  data-gallery-alt="SP nr 271 (Warszawa) - zdjęcie 3"
+	                  aria-label="Pokaż zdjęcie 3"
+	                >
+	                  <img src="assets/SP271/unnamed (1).webp" alt="" loading="lazy" />
+	                </button>
+	                <button
+	                  class="project-thumb"
+	                  type="button"
+	                  data-gallery-src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg"
+	                  data-gallery-alt="SP nr 271 (Warszawa) - zdjęcie 4"
+	                  aria-label="Pokaż zdjęcie 4"
+	                >
+	                  <img src="assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg" alt="" loading="lazy" />
+	                </button>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="project-detail-content">
+	            <section class="project-details" aria-label="Szczegóły realizacji">
+	              <div class="project-details-block">
+	                <span class="contact-label">Opis realizacji</span>
+	                <p>Budowa Szkoły Podstawowej nr 271 przy ul. Poziomki 11 w Warszawie.</p>
+	              </div>
+	              <hr class="project-details-divider" />
+	              <dl class="project-details-dl">
+	                <div>
+	                  <dt>Lokalizacja</dt>
+	                  <dd>Warszawa</dd>
+	                </div>
+	                <div>
+	                  <dt>Data</dt>
+	                  <dd>27 października 2023</dd>
+	                </div>
+	                <div>
+	                  <dt>Kategoria</dt>
+	                  <dd>Budynki użyteczności publicznej</dd>
+	                </div>
+	              </dl>
+	            </section>
+	          </div>
+	        </div>
+	      </section>
+    </main>
+	    <footer class="site-footer" data-site-footer></footer>
+    <script src="site.js"></script>
+  </body>
+</html>
