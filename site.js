@@ -1,4 +1,12 @@
 (() => {
+  function route(path) {
+    const script =
+      document.currentScript ||
+      document.querySelector('script[src$="site.js"]');
+    const scriptUrl = script?.getAttribute("src") || "site.js";
+    return new URL(path, scriptUrl).toString();
+  }
+
   function initNavOverlay() {
     const overlay = document.getElementById("nav-overlay");
     if (!overlay) return;
@@ -38,17 +46,17 @@
                 O nas <span class="nav-caret" aria-hidden="true"></span>
               </button>
               <div class="nav-overlay-submenu" id="nav-overlay-about" hidden>
-                <a href="/o-nas/">O nas</a>
-                <a href="/konsorcjum/">Konsorcjum</a>
-                <a href="/referencje/">Referencje</a>
+                <a href="${route("o-nas/")}">O nas</a>
+                <a href="${route("konsorcjum/")}">Konsorcjum</a>
+                <a href="${route("referencje/")}">Referencje</a>
               </div>
             </div>
 
-	            <a class="nav-overlay-link" href="/realizacje/">Realizacje</a>
-	            <a class="nav-overlay-link" href="/oferta/">Oferta</a>
-	            <a class="nav-overlay-link" href="/podwykonawcy/">Dla podwykonawców</a>
-	            <a class="nav-overlay-link" href="/oferty-pracy/">Oferty pracy</a>
-	            <a class="nav-overlay-link" href="/kontakt/">Kontakt</a>
+	            <a class="nav-overlay-link" href="${route("realizacje/")}">Realizacje</a>
+	            <a class="nav-overlay-link" href="${route("oferta/")}">Oferta</a>
+	            <a class="nav-overlay-link" href="${route("podwykonawcy/")}">Dla podwykonawców</a>
+	            <a class="nav-overlay-link" href="${route("oferty-pracy/")}">Oferty pracy</a>
+	            <a class="nav-overlay-link" href="${route("kontakt/")}">Kontakt</a>
 	          </nav>
 	        `;
 
@@ -76,7 +84,7 @@
       content.innerHTML = `
         <div class="nav-overlay-layout">
           <div class="nav-overlay-grid" aria-label="O nas">
-            <a class="nav-tile" href="/o-nas/">
+            <a class="nav-tile" href="${route("o-nas/")}">
               <div class="nav-tile-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z" />
@@ -87,7 +95,7 @@
                 <div class="nav-tile-desc">Informacje o firmie i skali realizacji.</div>
               </div>
             </a>
-            <a class="nav-tile" href="/konsorcjum/">
+            <a class="nav-tile" href="${route("konsorcjum/")}">
               <div class="nav-tile-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M16 11c1.7 0 3-1.3 3-3S17.7 5 16 5s-3 1.3-3 3 1.3 3 3 3ZM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3Zm0 2c-2.7 0-5 1.3-5 3v3h10v-3c0-1.7-2.3-3-5-3Zm8 0c-.3 0-.6 0-.9.1 1.2.8 1.9 1.8 1.9 2.9v3h6v-3c0-1.7-2.3-3-5-3Z" />
@@ -98,7 +106,7 @@
                 <div class="nav-tile-desc">Współpraca przy większych i złożonych inwestycjach.</div>
               </div>
             </a>
-            <a class="nav-tile" href="/referencje/">
+            <a class="nav-tile" href="${route("referencje/")}">
               <div class="nav-tile-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M6 2h9l3 3v17H6V2Zm9 1.5V6h2.5L15 3.5ZM8 10h8V8H8v2Zm0 4h8v-2H8v2Zm0 4h6v-2H8v2Z" />
@@ -291,7 +299,7 @@
           <p class="footer-heading">Adres</p>
           <p>ul. Wawerska 48C</p>
           <p>05-420 Józefów</p>
-          <a href="/kontakt/">Mapa i dane</a>
+          <a href="${route("kontakt/")}">Mapa i dane</a>
         </div>
       </div>
       <div class="container footer-bottom">
