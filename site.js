@@ -3,8 +3,8 @@
     const script =
       document.currentScript ||
       document.querySelector('script[src$="site.js"]');
-    const scriptUrl = script?.getAttribute("src") || "site.js";
-    return new URL(path, scriptUrl).toString();
+    const scriptUrl = script?.src || new URL("site.js", window.location.href).href;
+    return new URL(path, scriptUrl).href;
   }
 
   function initNavOverlay() {
