@@ -47,8 +47,8 @@
               </button>
               <div class="nav-overlay-submenu" id="nav-overlay-about" hidden>
                 <a href="${route("o-nas/")}">O nas</a>
-                <a href="${route("konsorcjum/")}">Konsorcjum</a>
-                <a href="${route("referencje/")}">Referencje</a>
+                <a href="${route("o-nas/konsorcjum/")}">Konsorcjum</a>
+                <a href="${route("o-nas/referencje/")}">Referencje</a>
               </div>
             </div>
 
@@ -95,7 +95,7 @@
                 <div class="nav-tile-desc">Informacje o firmie i skali realizacji.</div>
               </div>
             </a>
-            <a class="nav-tile" href="${route("konsorcjum/")}">
+            <a class="nav-tile" href="${route("o-nas/konsorcjum/")}">
               <div class="nav-tile-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M16 11c1.7 0 3-1.3 3-3S17.7 5 16 5s-3 1.3-3 3 1.3 3 3 3ZM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3Zm0 2c-2.7 0-5 1.3-5 3v3h10v-3c0-1.7-2.3-3-5-3Zm8 0c-.3 0-.6 0-.9.1 1.2.8 1.9 1.8 1.9 2.9v3h6v-3c0-1.7-2.3-3-5-3Z" />
@@ -106,7 +106,7 @@
                 <div class="nav-tile-desc">Współpraca przy większych i złożonych inwestycjach.</div>
               </div>
             </a>
-            <a class="nav-tile" href="${route("referencje/")}">
+            <a class="nav-tile" href="${route("o-nas/referencje/")}">
               <div class="nav-tile-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M6 2h9l3 3v17H6V2Zm9 1.5V6h2.5L15 3.5ZM8 10h8V8H8v2Zm0 4h8v-2H8v2Zm0 4h6v-2H8v2Z" />
