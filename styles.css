@@ -2688,6 +2688,8 @@ main.v2 .section:nth-of-type(odd) {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
   align-items: stretch;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .areas-column {
@@ -2697,12 +2699,12 @@ main.v2 .section:nth-of-type(odd) {
 .areas-card {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0;
   height: 100%;
   min-height: 300px;
   transition: all 0.4s var(--ease-premium);
-  border: 1px solid rgba(214, 221, 232, 0.4);
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+  border: none;
+  box-shadow: none;
 }
 
 .areas-card-large {
