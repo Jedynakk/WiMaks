@@ -692,6 +692,8 @@ main.v2 .section:nth-of-type(odd) {
   position: relative;
   transition: color 0.3s ease;
   flex: 0 0 auto;
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .main-nav a::after {
