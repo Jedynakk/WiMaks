@@ -4706,39 +4706,37 @@ main.v2 .section:nth-of-type(odd) {
   padding: clamp(3.5rem, 8vw, 5.5rem) 0;
 }
 
+.v2-builds .section-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.v2-builds .section-heading h2 {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0;
+}
+
 .v2-build-list {
   margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .v2-build-row {
   position: relative;
-  padding: 1.75rem 0 1.75rem 1.15rem;
-  margin-left: -1.15rem;
+  padding: 1.75rem 0;
   border-top: 1px solid var(--color-border);
-  transition: background-color 280ms var(--ease-premium);
-}
-
-.v2-build-row::before {
-  content: "";
-  position: absolute;
-  top: 0.35rem;
-  bottom: 0.35rem;
-  left: 0;
-  width: 2px;
-  background: var(--color-accent);
-  opacity: 0;
-  transform: scaleY(0.4);
-  transform-origin: top;
-  transition: opacity 280ms var(--ease-premium), transform 280ms var(--ease-premium);
+  transition: opacity 280ms var(--ease-premium);
 }
 
 .v2-build-row:hover {
-  background: rgba(15, 23, 42, 0.035);
-}
-
-.v2-build-row:hover::before {
-  opacity: 1;
-  transform: scaleY(1);
+  opacity: 0.75;
 }
 
 .v2-build-row:first-child {
@@ -4755,11 +4753,12 @@ main.v2 .section:nth-of-type(odd) {
 }
 
 .v2-build-head h3 {
-  margin: 0;
+  margin: 0 0 0.75rem 0;
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.015em;
+  line-height: 1.4;
 }
 
 .v2-build-dates {
@@ -4775,6 +4774,9 @@ main.v2 .section:nth-of-type(odd) {
 
 .v2-build-row p {
   margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-muted);
   max-width: 68ch;
   color: var(--color-muted);
   font-size: 0.98rem;
