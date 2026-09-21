@@ -5859,13 +5859,13 @@ main.v2 .section:nth-of-type(odd) {
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 8px;
   margin-bottom: 0;
 }
 
 .portfolio-card {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1.2;
   overflow: hidden;
   border-radius: 0;
 }
