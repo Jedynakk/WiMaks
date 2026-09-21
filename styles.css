@@ -83,21 +83,7 @@ body.modal-open {
 }
 
 .nav-dropdown-toggle {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #333;
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
   gap: 0.6rem;
-  position: relative;
-  transition: color 0.3s ease;
 }
 
 .nav-dropdown-toggle::after {
@@ -692,7 +678,7 @@ main.v2 .section:nth-of-type(odd) {
 .main-nav a,
 .main-nav button {
   text-decoration: none;
-  color: inherit;
+  color: #333;
   position: relative;
   transition: color 0.3s ease;
   flex: 0 0 auto;
@@ -702,6 +688,11 @@ main.v2 .section:nth-of-type(odd) {
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
+  font-family: 'Manrope', sans-serif;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .main-nav a::after {
