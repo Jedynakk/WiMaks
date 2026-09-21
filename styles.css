@@ -620,9 +620,16 @@ main.v2 .section:nth-of-type(odd) {
 .section-heading-left,
 .areas-showcase .section-heading {
   margin-inline: 0;
-  text-align: left;
-  margin: 0 0 1.75rem;
+  text-align: center;
+  margin: 0 0 3rem;
   max-width: none;
+}
+
+.areas-showcase .section-heading h2 {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0;
 }
 
 .section-heading h2,
