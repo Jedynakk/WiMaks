@@ -646,6 +646,10 @@ main.v2 .section:nth-of-type(odd) {
   border-bottom: 1px solid #f0f0f0;
 }
 
+.site-header .container {
+  width: min(calc(100% - 2rem), var(--container));
+}
+
 .nav-row {
   display: flex;
   align-items: center;
