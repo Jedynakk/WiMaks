@@ -683,6 +683,7 @@ main.v2 .section:nth-of-type(odd) {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "liga" off;
   contain: layout style paint;
+  max-width: 700px;
 }
 
 .main-nav a,
