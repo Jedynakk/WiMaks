@@ -4720,7 +4720,7 @@ main.v2 .section:nth-of-type(odd) {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
+  height: 96px;
   padding: 1rem 1.5rem;
 }
 
@@ -4730,7 +4730,7 @@ main.v2 .section:nth-of-type(odd) {
 
 .v2-clients-row img {
   max-width: 100%;
-  max-height: 120px;
+  max-height: 96px;
   width: auto;
   height: auto;
   object-fit: contain;
