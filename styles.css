@@ -2590,10 +2590,10 @@ main.v2 .section:nth-of-type(odd) {
 
 .projects-mosaic-reveal .mosaic-meta {
   position: absolute;
-  left: 12px;
+  left: 8px;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
-  transform-origin: left center;
+  transform-origin: center;
   background: transparent !important;
   border-top: 0;
   white-space: nowrap;
