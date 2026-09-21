@@ -678,12 +678,6 @@ main.v2 .section:nth-of-type(odd) {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-size: 0.95rem;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "liga" off;
-  contain: layout style paint;
-  max-width: 700px;
 }
 
 .main-nav a,
