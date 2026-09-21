@@ -5097,6 +5097,11 @@ main.v2 .section:nth-of-type(odd) {
 
 .v2 {
   --font-display: "Cabinet Grotesk", "Satoshi", "Switzer", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.v2 > section,
+.v2 > .section,
+.v2 > article {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 1.03rem;
 }
