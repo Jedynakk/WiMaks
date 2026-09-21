@@ -1481,11 +1481,13 @@ main.v2 .section:nth-of-type(odd) {
 .about-hero-copy h1,
 .contact-intro-copy h1,
 .project-detail-intro h1 {
-  font-size: clamp(2.3rem, 3.5vw, 3.6rem);
-  line-height: 1.08;
-  letter-spacing: -0.01em;
-  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
   max-width: 28ch;
+  text-align: center;
 }
 
 .project-detail-intro h1 {
