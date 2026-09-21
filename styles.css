@@ -627,7 +627,13 @@ main.v2 .section:nth-of-type(odd) {
   letter-spacing: -0.03em;
 }
 
-.section-heading h2,
+.section-heading h2 {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
 .final-cta h2 {
   font-size: clamp(1.8rem, 3.5vw, 2.1rem);
   font-weight: 500;
@@ -1455,9 +1461,12 @@ main.v2 .section:nth-of-type(odd) {
 
 .split-heading h2 {
   margin: 0;
-  font-size: clamp(1.6rem, 2.6vw, 2.15rem);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-size: 48px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-align: center;
 }
 
 .split-heading-note {
