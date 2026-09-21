@@ -700,6 +700,8 @@ main.v2 .section:nth-of-type(odd) {
   font-weight: 400;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
 }
 
 .main-nav a::after {
