@@ -3823,7 +3823,6 @@ main.v2 .section:nth-of-type(odd) {
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--color-muted);
 }
 

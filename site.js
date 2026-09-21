@@ -295,8 +295,8 @@
           <a href="mailto:biuro@wimaks.eu">biuro@wimaks.eu</a>
           <p>Poniedziałek-Piątek 8:00-16:00</p>
         </div>
-        <div class="footer-block" aria-label="Adres">
-          <p class="footer-heading">Adres</p>
+        <div class="footer-block" aria-label="Lokalizacja">
+          <p class="footer-heading">Lokalizacja</p>
           <p>ul. Wawerska 48C</p>
           <p>05-420 Józefów</p>
           <a href="${route("kontakt/")}">Mapa i dane</a>
