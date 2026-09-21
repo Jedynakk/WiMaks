@@ -4721,7 +4721,6 @@ main.v2 .section:nth-of-type(odd) {
   justify-content: center;
   height: 120px;
   padding: 1rem 1.5rem;
-  background-color: #ffffff;
 }
 
 .v2-clients-row li + li {
