@@ -121,6 +121,13 @@
                 </div>
                 <span class="nav-overlay-card-arrow" aria-hidden="true">→</span>
               </a>
+              <a class="nav-overlay-card" href="${route("referencje/")}">
+                <div class="nav-overlay-card-content">
+                  <div class="nav-overlay-title">Referencje</div>
+                  <div class="nav-overlay-desc">Wybrane listy referencyjne i potwierdzenia.</div>
+                </div>
+                <span class="nav-overlay-card-arrow" aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
