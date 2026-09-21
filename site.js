@@ -669,14 +669,16 @@
   }
 
   function normalizeNavbarWidth() {
-    const mainNav = document.querySelector('.main-nav');
-    if (!mainNav) return;
+    setTimeout(() => {
+      const mainNav = document.querySelector('.main-nav');
+      if (!mainNav) return;
 
-    requestAnimationFrame(() => {
       const width = mainNav.offsetWidth;
-      mainNav.style.minWidth = width + 'px';
-      mainNav.style.maxWidth = width + 'px';
-    });
+      if (width > 0) {
+        mainNav.style.minWidth = width + 'px';
+        mainNav.style.maxWidth = width + 'px';
+      }
+    }, 100);
   }
 
   async function init() {
