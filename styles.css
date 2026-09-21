@@ -4699,6 +4699,7 @@ main.v2 .section:nth-of-type(odd) {
 
 .v2-clients {
   border-top: 1px solid var(--color-border);
+  background: transparent !important;
 }
 
 .v2-clients-head {
