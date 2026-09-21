@@ -2,9 +2,31 @@
   function route(path) {
     const script =
       document.currentScript ||
-      document.querySelector('script[src$="site.js"]');
+      document.querySelector('script[src*="site.js"]');
     const scriptUrl = script?.src || new URL("site.js", window.location.href).href;
     return new URL(path, scriptUrl).href;
+  }
+
+  async function loadSharedHeader() {
+    const header = document.querySelector('header.site-header');
+    if (header) return;
+
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const isSubpage = pathSegments.length > 0;
+    const headerPath = isSubpage ? '../_header.html' : './_header.html';
+
+    try {
+      const response = await fetch(headerPath);
+      if (!response.ok) return;
+      const html = await response.text();
+
+      const main = document.querySelector('main');
+      if (main) {
+        main.insertAdjacentHTML('beforebegin', html);
+      }
+    } catch (e) {
+      console.error('Failed to load header:', e);
+    }
   }
 
   function initNavOverlay() {
@@ -83,40 +105,30 @@
 
       content.innerHTML = `
         <div class="nav-overlay-layout">
-          <div class="nav-overlay-grid" aria-label="O nas">
-            <a class="nav-tile" href="${route("o-nas/")}">
-              <div class="nav-tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M4 21h16v-2H4v2Zm2-4h3V7H6v10Zm5 0h3V3h-3v14Zm5 0h3V9h-3v8Z" />
-                </svg>
+          <div class="nav-overlay-cards" aria-label="O nas">
+            <a class="nav-overlay-card nav-overlay-card-large" href="${route("o-nas/")}">
+              <div class="nav-overlay-card-content">
+                <div class="nav-overlay-title">O nas</div>
+                <div class="nav-overlay-desc">Informacje o firmie i skali realizacji.</div>
               </div>
-              <div>
-                <div class="nav-tile-title">O nas</div>
-                <div class="nav-tile-desc">Informacje o firmie i skali realizacji.</div>
-              </div>
+              <span class="nav-overlay-card-arrow" aria-hidden="true">→</span>
             </a>
-            <a class="nav-tile" href="${route("konsorcjum/")}">
-              <div class="nav-tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M16 11c1.7 0 3-1.3 3-3S17.7 5 16 5s-3 1.3-3 3 1.3 3 3 3ZM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3Zm0 2c-2.7 0-5 1.3-5 3v3h10v-3c0-1.7-2.3-3-5-3Zm8 0c-.3 0-.6 0-.9.1 1.2.8 1.9 1.8 1.9 2.9v3h6v-3c0-1.7-2.3-3-5-3Z" />
-                </svg>
-              </div>
-              <div>
-                <div class="nav-tile-title">Konsorcjum</div>
-                <div class="nav-tile-desc">Współpraca przy większych i złożonych inwestycjach.</div>
-              </div>
-            </a>
-            <a class="nav-tile" href="${route("referencje/")}">
-              <div class="nav-tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M6 2h9l3 3v17H6V2Zm9 1.5V6h2.5L15 3.5ZM8 10h8V8H8v2Zm0 4h8v-2H8v2Zm0 4h6v-2H8v2Z" />
-                </svg>
-              </div>
-              <div>
-                <div class="nav-tile-title">Referencje</div>
-                <div class="nav-tile-desc">Wybrane listy referencyjne i potwierdzenia.</div>
-              </div>
-            </a>
+            <div class="nav-overlay-cards-featured">
+              <a class="nav-overlay-card" href="${route("konsorcjum/")}">
+                <div class="nav-overlay-card-content">
+                  <div class="nav-overlay-title">Konsorcjum</div>
+                  <div class="nav-overlay-desc">Współpraca przy większych i złożonych inwestycjach.</div>
+                </div>
+                <span class="nav-overlay-card-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="nav-overlay-card" href="${route("referencje/")}">
+                <div class="nav-overlay-card-content">
+                  <div class="nav-overlay-title">Referencje</div>
+                  <div class="nav-overlay-desc">Wybrane listy referencyjne i potwierdzenia.</div>
+                </div>
+                <span class="nav-overlay-card-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </div>
       `;
@@ -599,7 +611,8 @@
     });
   }
 
-  function init() {
+  async function init() {
+    await loadSharedHeader();
     initNavOverlay();
     initCountUps();
     initFooter();
