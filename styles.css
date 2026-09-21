@@ -88,9 +88,9 @@ body.modal-open {
   background: transparent;
   color: #333;
   font-family: 'Manrope', sans-serif;
-  font-weight: 500;
-  font-size: 9px;
-  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
   display: inline-flex;
