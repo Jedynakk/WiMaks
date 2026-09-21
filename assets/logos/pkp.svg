@@ -1,0 +1,8 @@
+<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="120" fill="#003da5"/>
+  <circle cx="60" cy="30" r="15" fill="#ffffff"/>
+  <circle cx="60" cy="30" r="12" fill="none" stroke="#003da5" stroke-width="2"/>
+  <rect x="80" y="15" width="80" height="30" fill="#ffffff"/>
+  <text x="120" y="40" font-size="18" font-weight="bold" fill="#003da5" text-anchor="middle" font-family="Arial">PKP</text>
+  <text x="100" y="95" font-size="14" fill="#ffffff" text-anchor="middle" font-family="Arial">Koleje Polskie</text>
+</svg>
