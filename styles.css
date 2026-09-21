@@ -2701,14 +2701,14 @@ main.v2 .section:nth-of-type(odd) {
   overflow: hidden;
   border-radius: 0;
   height: 100%;
-  min-height: 300px;
+  min-height: 450px;
   transition: all 0.4s var(--ease-premium);
   border: none;
   box-shadow: none;
 }
 
 .areas-card-large {
-  min-height: 300px;
+  min-height: 450px;
 }
 
 .areas-image-wrapper {
