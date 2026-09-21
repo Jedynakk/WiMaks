@@ -5657,9 +5657,55 @@ main.v2 .section:nth-of-type(odd) {
 .v2-benefit-item {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
+  padding: 40px;
   padding-bottom: 0;
   border-bottom: none;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.v2-benefit-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.v2-benefit-item:hover {
+  border-color: #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.v2-benefit-item:hover::before {
+  transform: scaleX(1);
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f3f8;
+  border-radius: 8px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.benefit-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .v2-benefit-item h3 {
