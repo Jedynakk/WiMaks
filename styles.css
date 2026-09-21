@@ -4924,13 +4924,17 @@ main.v2 .section:nth-of-type(odd) {
 .v2-svc-intro {
   position: sticky;
   top: calc(var(--header-h) + 2rem);
+  text-align: center;
 }
 
 .v2-svc-intro h2 {
-  margin: 0 0 1rem;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 0 0 2rem;
+  font-size: 48px;
+  font-weight: 400;
   line-height: 1.15;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
 }
 
 .v2-svc-lead {
