@@ -1,7 +1,0 @@
-<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="120" fill="#1e3a8a"/>
-  <polygon points="100,20 130,50 130,80 70,80 70,50" fill="#ffffff"/>
-  <polygon points="100,30 120,50 120,75 80,75 80,50" fill="#1e3a8a"/>
-  <circle cx="100" cy="62" r="8" fill="#ffffff"/>
-  <text x="100" y="105" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Arial">Instytut Lotnictwa</text>
-</svg>
