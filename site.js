@@ -668,8 +668,20 @@
     }, 190);
   }
 
+  function normalizeNavbarWidth() {
+    const mainNav = document.querySelector('.main-nav');
+    if (!mainNav) return;
+
+    requestAnimationFrame(() => {
+      const width = mainNav.offsetWidth;
+      mainNav.style.minWidth = width + 'px';
+      mainNav.style.maxWidth = width + 'px';
+    });
+  }
+
   async function init() {
     await loadSharedHeader();
+    normalizeNavbarWidth();
     initNavOverlay();
     initCountUps();
     initFooter();
