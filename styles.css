@@ -2659,9 +2659,12 @@ main.v2 .section:nth-of-type(odd) {
 }
 
 .projects-mosaic-reveal .mosaic-title {
+  display: block;
 }
 
 .projects-mosaic-reveal .mosaic-sub {
+  display: block;
+  color: #ffffff;
 }
 
 .areas-grid {
