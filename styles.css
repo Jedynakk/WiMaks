@@ -5255,10 +5255,16 @@ main.v2 .section:nth-of-type(odd) {
 .v2 .v2-trust-statement h2,
 .v2 .v2-svc-intro h2,
 .v2 .v2-clients-head h2,
-.v2 .section-heading h2,
-.v2 .projects-header h2 {
+.v2 .section-heading h2 {
   font-size: clamp(1.9rem, 3.2vw, 2.7rem);
   line-height: 1.1;
+}
+
+.v2 .projects-header h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.15;
+  font-family: 'Playfair Display', serif;
 }
 
 .v2 .projects {
