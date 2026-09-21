@@ -41,7 +41,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Switzer", "Manrope", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
@@ -87,7 +87,7 @@ body.modal-open {
   border: 0;
   background: transparent;
   color: #333;
-  font-family: "Switzer", "Manrope", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-size: 0.95rem;
   cursor: pointer;
@@ -139,7 +139,7 @@ body.modal-open {
   padding: 0.95rem 0;
   text-decoration: none;
   color: var(--color-text);
-  font-family: "Switzer", "Manrope", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 800;
   letter-spacing: -0.01em;
   display: flex;
@@ -177,7 +177,7 @@ body.modal-open {
   padding: 0.55rem 0;
   text-decoration: none;
   color: var(--color-muted);
-  font-family: "Switzer", "Manrope", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 700;
 }
 
@@ -304,7 +304,7 @@ body.modal-open {
 
 .nav-overlay-title {
   margin: 0;
-  font-family: "Switzer", "Manrope", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   font-size: clamp(1.6rem, 2.2vw, 2.05rem);
   line-height: 1.12;
   letter-spacing: -0.03em;
@@ -356,7 +356,7 @@ body.modal-open {
   align-items: baseline;
   justify-content: space-between;
   gap: 0.5rem;
-  font-family: "Switzer", "Manrope", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--color-text);
@@ -671,7 +671,7 @@ main.v2 .section:nth-of-type(odd) {
   display: inline-flex;
   gap: 2.5rem;
   color: #333;
-  font-family: "Switzer", "Manrope", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-size: 0.95rem;
 }
@@ -5058,7 +5058,7 @@ main.v2 .section:nth-of-type(odd) {
 .main-nav,
 .main-nav a,
 .nav-dropdown-toggle {
-  font-family: "Satoshi", "Switzer", "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 500;
   font-size: 1.02rem;
   letter-spacing: 0.005em;
@@ -5068,7 +5068,7 @@ main.v2 .section:nth-of-type(odd) {
 
 .v2 {
   --font-display: "Cabinet Grotesk", "Satoshi", "Switzer", system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-family: "Satoshi", "Switzer", "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 1.03rem;
 }
 
@@ -5091,11 +5091,11 @@ main.v2 .section:nth-of-type(odd) {
 .v2 .hero-banner-sub,
 .v2 .v2-svc-lead,
 .v2 p {
-  font-family: "Satoshi", "Switzer", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 .v2 .eyebrow {
-  font-family: "Satoshi", "Switzer", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 .v2 .v2-marquee-seq {
