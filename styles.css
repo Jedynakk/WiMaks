@@ -2794,8 +2794,8 @@ main.v2 .section:nth-of-type(odd) {
   border: none;
   border-radius: 0;
   background: transparent;
-  aspect-ratio: 3 / 4;
-  min-height: 380px;
+  aspect-ratio: 2 / 3;
+  min-height: 500px;
 }
 
 .mosaic-card img {
