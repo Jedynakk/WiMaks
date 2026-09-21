@@ -686,11 +686,13 @@ main.v2 .section:nth-of-type(odd) {
 
 .main-nav a,
 .main-nav button {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
   position: relative;
   transition: color 0.3s ease;
   flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .main-nav a::after {
