@@ -675,9 +675,11 @@ main.v2 .section:nth-of-type(odd) {
   display: inline-flex;
   gap: 2.5rem;
   color: #333;
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  font-weight: 400;
-  font-size: 0.95rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
   min-width: 699px;
   max-width: 699px;
 }
