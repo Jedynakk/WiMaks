@@ -5484,3 +5484,72 @@ main.v2 .section:nth-of-type(odd) {
   stroke: none;
   fill: currentColor;
 }
+
+/* Cooperation Areas Grid */
+.cooperation-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.cooperation-area-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.cooperation-area-item:hover {
+  background: var(--color-surface-strong);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.cooperation-area-item h4 {
+  font-family: var(--font-display);
+  color: var(--color-primary);
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cooperation-area-item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cooperation-area-item li {
+  color: var(--color-muted);
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.cooperation-area-item li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .cooperation-areas-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cooperation-area-item {
+    padding: 20px;
+  }
+
+  .cooperation-area-item h4 {
+    font-size: 16px;
+  }
+}
