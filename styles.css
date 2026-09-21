@@ -615,9 +615,12 @@ main.v2 .section:nth-of-type(odd) {
   }
 }
 
-.section-heading-left {
+.section-heading-left,
+.areas-showcase .section-heading {
   margin-inline: 0;
   text-align: left;
+  margin: 0 0 1.75rem;
+  max-width: none;
 }
 
 .section-heading h2,
