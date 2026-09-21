@@ -2436,6 +2436,10 @@ main.v2 .section:nth-of-type(odd) {
   display: block;
 }
 
+.projects {
+  background-color: #ffffff;
+}
+
 .projects-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
