@@ -5569,48 +5569,70 @@ main.v2 .section:nth-of-type(odd) {
 
 /* Hero Redesign - Asymmetric Split */
 .hero-redesign {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-redesign::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-redesign .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .hero-redesign-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 80px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 0;
+  text-align: center;
 }
 
 .hero-redesign-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
+  max-width: 900px;
 }
 
 .hero-redesign-content h1 {
-  font-size: 52px;
+  font-size: 80px;
   font-weight: 700;
-  line-height: 1.15;
-  color: var(--color-text);
+  line-height: 1.1;
+  color: #ffffff;
   margin: 0;
-  max-width: 52ch;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
 }
 
 .hero-redesign-lead {
-  font-size: 17px;
-  line-height: 1.65;
-  color: var(--color-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
-  max-width: 52ch;
   font-weight: 400;
 }
 
 .hero-redesign-visual {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  aspect-ratio: 3.5 / 2.8;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .hero-redesign-visual img {
@@ -5659,13 +5681,8 @@ main.v2 .section:nth-of-type(odd) {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero-redesign-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
   .hero-redesign-content h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   .v2-benefits-grid {
@@ -5684,16 +5701,15 @@ main.v2 .section:nth-of-type(odd) {
 
 @media (max-width: 768px) {
   .hero-redesign {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    min-height: 80dvh;
   }
 
   .hero-redesign-content h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .hero-redesign-lead {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
