@@ -1252,6 +1252,106 @@ main.v2 .section:nth-of-type(odd) {
   background: #fff;
 }
 
+/* Modern Service Category Cards */
+.scope-item.service-category {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.scope-item.service-category:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.08);
+}
+
+.service-category-header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.service-category-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.service-category-list {
+  margin: 0;
+  padding-left: 1.3rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+  list-style-type: disc;
+}
+
+.service-category-list li {
+  margin-bottom: 0.45rem;
+}
+
+.service-category-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Awards Recognition Section */
+.awards-recognition {
+  display: flex;
+  flex-direction: column;
+}
+
+.awards-header {
+  margin-bottom: 1.5rem;
+}
+
+.awards-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.award-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.award-item img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-item img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30, 58, 138, 0.12);
+}
+
+.award-item figcaption {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  text-align: center;
+  font-weight: 500;
+}
+
 .about-features {
   display: grid;
   gap: 2.25rem;
@@ -2231,6 +2331,10 @@ main.v2 .section:nth-of-type(odd) {
   }
 
   .about-scope-awards {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-grid {
     grid-template-columns: 1fr;
   }
 
