@@ -2600,9 +2600,15 @@ main.v2 .section:nth-of-type(odd) {
   gap: 0.25rem;
   padding: 12px;
   z-index: 10;
-  opacity: 1 !important;
+  opacity: 0;
+  transition: opacity 200ms ease;
   background: transparent !important;
   border-top: 0;
+}
+
+.projects-mosaic-reveal .mosaic-card:hover .mosaic-meta,
+.projects-mosaic-reveal .mosaic-card:focus-visible .mosaic-meta {
+  opacity: 1;
 }
 
 .projects-mosaic-reveal .mosaic-card:hover .mosaic-meta,
