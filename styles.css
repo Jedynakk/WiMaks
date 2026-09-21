@@ -236,7 +236,7 @@ body.modal-open {
 .nav-overlay-panel {
   position: relative;
   z-index: 1;
-  height: min(50vh, 520px);
+  height: auto;
   width: 100%;
   margin: 0;
   background: #fff;
@@ -276,7 +276,7 @@ body.modal-open {
 .nav-overlay-content {
   width: 100%;
   margin: 0;
-  padding: 3rem 0 2.25rem;
+  padding: 1.5rem 0 1rem;
 }
 
 .nav-overlay-panel .nav-overlay-content {
@@ -4698,12 +4698,20 @@ main.v2 .section:nth-of-type(odd) {
 /* ---- Clients / trust logos ---- */
 
 .v2-clients {
-  border-top: 1px solid var(--color-border);
-  background: transparent !important;
+  padding: 3rem 0;
+  border: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.02) 0%, rgba(211, 47, 47, 0.01) 100%);
 }
 
 .v2-clients-head {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.v2-clients-head h2 {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
 }
 
 .v2-clients-row {
@@ -4712,46 +4720,47 @@ main.v2 .section:nth-of-type(odd) {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  gap: 2.5rem;
+  border: 0;
 }
 
 .v2-clients-row li {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
-  padding: 1rem 1.5rem;
+  height: auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(214, 221, 232, 0.6);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 240ms ease, border-color 240ms ease;
 }
 
-.v2-clients-row li + li {
-  border-left: 1px solid var(--color-border);
+.v2-clients-row li:hover {
+  border-color: rgba(30, 58, 138, 0.2);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
 .v2-clients-row img {
   max-width: 100%;
-  max-height: 120px;
+  max-height: 80px;
   width: auto;
   height: auto;
   object-fit: contain;
-  transition: transform 400ms var(--ease-premium);
 }
 
-.v2-clients-row li:hover img {
-  transform: scale(1.04);
-}
-
-@media (max-width: 860px) {
+@media (max-width: 920px) {
   .v2-clients-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem;
   }
+}
 
-  .v2-clients-row li:nth-child(odd) {
-    border-left: 0;
-  }
-
-  .v2-clients-row li:nth-child(n + 3) {
-    border-top: 1px solid var(--color-border);
+@media (max-width: 600px) {
+  .v2-clients-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 }
 
@@ -5161,6 +5170,100 @@ main.v2 .section:nth-of-type(odd) {
 
 .v2 .v2-clients + .projects {
   padding-top: 2rem;
+}
+
+/* Minimal Dropdown Redesign */
+.nav-overlay-cards {
+  display: grid;
+  gap: 0;
+  margin-top: 0.5rem;
+}
+
+.nav-overlay-cards-featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.nav-overlay-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(30, 58, 138, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  min-height: auto;
+}
+
+.nav-overlay-card:hover {
+  transform: translateX(3px);
+}
+
+.nav-overlay-card:active {
+  transform: translateX(1px);
+}
+
+.nav-overlay-card-large {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+}
+
+@media (max-width: 860px) {
+  .nav-overlay-card-large {
+    border-bottom: 1px solid rgba(30, 58, 138, 0.06);
+  }
+}
+
+.nav-overlay-icon {
+  display: none;
+}
+
+.nav-overlay-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.nav-overlay-title {
+  font-family: "Switzer", "Cabinet Grotesk", "Satoshi", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.nav-overlay-card-large .nav-overlay-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.nav-overlay-desc {
+  display: none;
+}
+
+.nav-overlay-card-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: rgba(30, 58, 138, 0.2);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+}
+
+.nav-overlay-card:hover .nav-overlay-card-arrow {
+  opacity: 1;
+  transform: translateY(-50%) translateX(4px);
+  color: rgba(30, 58, 138, 0.6);
 }
 
 .v2 .projects {
