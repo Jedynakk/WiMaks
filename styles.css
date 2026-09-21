@@ -87,9 +87,11 @@ body.modal-open {
   border: 0;
   background: transparent;
   color: #333;
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  font-weight: 400;
-  font-size: 0.95rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -677,8 +679,8 @@ main.v2 .section:nth-of-type(odd) {
   color: #333;
   font-family: 'Manrope', sans-serif;
   font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 2.5px;
+  font-size: 9px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   min-width: 699px;
   max-width: 699px;
