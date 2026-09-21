@@ -4723,7 +4723,7 @@ main.v2 .section:nth-of-type(odd) {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
-  max-width: none;
+  padding: 0 40px;
 }
 
 .v2-build-row {
