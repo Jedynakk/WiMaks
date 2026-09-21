@@ -685,10 +685,6 @@ main.v2 .section:nth-of-type(odd) {
   gap: 2.5rem;
   color: #333;
   font-family: 'Manrope', sans-serif;
-  font-weight: 500;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   min-width: 699px;
   max-width: 699px;
 }
@@ -702,6 +698,8 @@ main.v2 .section:nth-of-type(odd) {
   flex: 0 0 auto;
   font-size: 0.85rem;
   font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .main-nav a::after {
