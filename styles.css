@@ -2589,17 +2589,22 @@ main.v2 .section:nth-of-type(odd) {
 }
 
 .projects-mosaic-reveal .mosaic-meta {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 180ms ease, transform 240ms ease, background 180ms ease;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
   background: transparent !important;
   border-top: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1rem;
 }
 
 .projects-mosaic-reveal .mosaic-card:hover .mosaic-meta,
 .projects-mosaic-reveal .mosaic-card:focus-visible .mosaic-meta {
-  opacity: 1;
-  transform: translateY(0);
   background: transparent !important;
 }
 
