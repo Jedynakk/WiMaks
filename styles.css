@@ -5618,7 +5618,6 @@ main.v2 .section:nth-of-type(odd) {
   color: #ffffff;
   margin: 0;
   letter-spacing: -1px;
-  text-transform: uppercase;
   font-family: 'Playfair Display', serif;
 }
 
