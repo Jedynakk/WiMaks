@@ -608,7 +608,64 @@
 
       // Default active: first thumb.
       setActive(buttons[0] instanceof HTMLElement ? buttons[0] : null);
+
+      // Lightbox: click main image to open fullscreen
+      const figure = mainImg.closest(".project-gallery-main");
+      if (figure instanceof HTMLElement) {
+        mainImg.style.cursor = "zoom-in";
+        mainImg.addEventListener("click", () => openLightbox(mainImg.src, mainImg.alt));
+      }
     });
+  }
+
+  function openLightbox(src, alt) {
+    let modal = document.getElementById("gallery-lightbox");
+    if (!modal) {
+      modal = document.createElement("div");
+      modal.id = "gallery-lightbox";
+      modal.className = "gallery-lightbox";
+      modal.innerHTML = `
+        <div class="gallery-lightbox-backdrop" data-lightbox-close></div>
+        <div class="gallery-lightbox-container">
+          <button class="gallery-lightbox-close" type="button" data-lightbox-close aria-label="Zamknij">
+            <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/>
+            </svg>
+          </button>
+          <img class="gallery-lightbox-image" src="" alt="" />
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      const closeButtons = modal.querySelectorAll("[data-lightbox-close]");
+      closeButtons.forEach((btn) => {
+        btn.addEventListener("click", closeLightbox);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.hidden) closeLightbox();
+      });
+    }
+
+    const img = modal.querySelector(".gallery-lightbox-image");
+    if (img instanceof HTMLImageElement) {
+      img.src = src;
+      img.alt = alt;
+    }
+
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    requestAnimationFrame(() => modal.classList.add("is-open"));
+  }
+
+  function closeLightbox() {
+    const modal = document.getElementById("gallery-lightbox");
+    if (!modal) return;
+    modal.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+    setTimeout(() => {
+      modal.hidden = true;
+    }, 190);
   }
 
   async function init() {
