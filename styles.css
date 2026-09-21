@@ -5485,71 +5485,82 @@ main.v2 .section:nth-of-type(odd) {
   fill: currentColor;
 }
 
-/* Cooperation Areas Grid */
-.cooperation-areas-grid {
+/* Cooperation Areas Showcase */
+.cooperation-areas-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
 }
 
-.cooperation-area-item {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 24px;
-  transition: all 0.3s ease;
+.cooperation-specialty {
+  position: relative;
+  padding: 0;
 }
 
-.cooperation-area-item:hover {
-  background: var(--color-surface-strong);
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-soft);
+.specialty-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-primary);
 }
 
-.cooperation-area-item h4 {
+.specialty-header h4 {
   font-family: var(--font-display);
   color: var(--color-primary);
-  margin: 0 0 16px 0;
-  font-size: 18px;
+  margin: 0;
+  font-size: 20px;
   font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
-.cooperation-area-item ul {
+.specialty-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.cooperation-area-item li {
-  color: var(--color-muted);
-  padding: 8px 0;
-  padding-left: 20px;
-  position: relative;
+.specialty-list li {
+  color: var(--color-text);
+  padding: 12px 0;
+  line-height: 1.5;
+  font-size: 15px;
+  transition: color 0.2s ease;
 }
 
-.cooperation-area-item li:before {
+.specialty-list li:hover {
+  color: var(--color-primary);
+}
+
+.specialty-list li:before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 12px;
-  width: 6px;
-  height: 6px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
   background: var(--color-primary);
   border-radius: 50%;
+  margin-right: 12px;
+  margin-left: 0;
+  vertical-align: 3px;
+}
+
+@media (max-width: 1024px) {
+  .cooperation-areas-showcase {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
 }
 
 @media (max-width: 768px) {
-  .cooperation-areas-grid {
+  .cooperation-areas-showcase {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 28px;
   }
 
-  .cooperation-area-item {
-    padding: 20px;
+  .specialty-header h4 {
+    font-size: 18px;
   }
 
-  .cooperation-area-item h4 {
-    font-size: 16px;
+  .specialty-list li {
+    font-size: 14px;
   }
 }
