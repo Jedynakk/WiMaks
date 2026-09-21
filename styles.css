@@ -2568,10 +2568,11 @@ main.v2 .section:nth-of-type(odd) {
 
 .projects-header h2 {
   margin: 0;
-  font-size: clamp(1.4rem, 2.3vw, 1.9rem);
-  font-weight: 500;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  font-family: 'Geist', 'Manrope', 'Roboto', sans-serif;
 }
 
 .section-actions {
@@ -2783,9 +2784,9 @@ main.v2 .section:nth-of-type(odd) {
 .mosaic-card {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: #dbe4f0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
   aspect-ratio: 4 / 3;
   min-height: 280px;
 }
@@ -4855,8 +4856,7 @@ main.v2 .section:nth-of-type(odd) {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  border: none !important;
 }
 
 .v2-clients-row li {
@@ -4865,10 +4865,10 @@ main.v2 .section:nth-of-type(odd) {
   justify-content: center;
   height: 96px;
   padding: 1rem 1.5rem;
+  border: none !important;
 }
 
 .v2-clients-row li + li {
-  border-left: 1px solid var(--color-border);
 }
 
 .v2-clients-row img {
@@ -4885,11 +4885,9 @@ main.v2 .section:nth-of-type(odd) {
   }
 
   .v2-clients-row li:nth-child(odd) {
-    border-left: 0;
   }
 
   .v2-clients-row li:nth-child(n + 3) {
-    border-top: 1px solid var(--color-border);
   }
 }
 
