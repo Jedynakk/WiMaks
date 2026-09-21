@@ -5951,23 +5951,7 @@ main.v2 .section:nth-of-type(odd) {
   border-color: white;
 }
 
-@media (min-width: 1024px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
 @media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .portfolio-card {
-    aspect-ratio: 4 / 3;
-  }
-
   .portfolio-title {
     writing-mode: horizontal-tb;
     transform: none;
