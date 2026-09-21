@@ -2590,7 +2590,7 @@ main.v2 .section:nth-of-type(odd) {
 
 .projects-mosaic-reveal .mosaic-meta {
   position: absolute;
-  left: 0;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   transform-origin: left center;
@@ -2600,7 +2600,8 @@ main.v2 .section:nth-of-type(odd) {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  padding-left: 1rem;
+  z-index: 10;
+  opacity: 1 !important;
 }
 
 .projects-mosaic-reveal .mosaic-card:hover .mosaic-meta,
