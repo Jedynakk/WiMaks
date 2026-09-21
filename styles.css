@@ -684,11 +684,13 @@ main.v2 .section:nth-of-type(odd) {
   font-feature-settings: "liga" off;
 }
 
-.main-nav a {
+.main-nav a,
+.main-nav button {
   text-decoration: none;
   color: inherit;
   position: relative;
   transition: color 0.3s ease;
+  flex: 0 0 auto;
 }
 
 .main-nav a::after {
