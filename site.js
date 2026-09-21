@@ -668,22 +668,8 @@
     }, 190);
   }
 
-  function normalizeNavbarWidth() {
-    setTimeout(() => {
-      const mainNav = document.querySelector('.main-nav');
-      if (!mainNav) return;
-
-      const width = mainNav.offsetWidth;
-      if (width > 0) {
-        mainNav.style.minWidth = width + 'px';
-        mainNav.style.maxWidth = width + 'px';
-      }
-    }, 100);
-  }
-
   async function init() {
     await loadSharedHeader();
-    normalizeNavbarWidth();
     initNavOverlay();
     initCountUps();
     initFooter();
