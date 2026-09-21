@@ -5231,14 +5231,6 @@ main.v2 .section:nth-of-type(odd) {
 
 /* ---- Navbar font ---- */
 
-.main-nav,
-.main-nav a,
-.nav-dropdown-toggle {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-weight: 500;
-  font-size: 1.02rem;
-  letter-spacing: 0.005em;
-}
 
 /* ---- Main page typography: Cabinet Grotesk (display) + Satoshi (text) ---- */
 
