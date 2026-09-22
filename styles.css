@@ -1519,9 +1519,15 @@ main.v2 .section:nth-of-type(odd) {
   margin: 0;
 }
 
+.contact-intro-copy {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 65ch;
+}
+
 .contact-intro-text {
-  margin-top: 0.75rem;
-  max-width: 62ch;
+  margin: 0.75rem auto 0;
+  max-width: 65ch;
   color: var(--color-muted);
   font-size: 1rem;
 }
