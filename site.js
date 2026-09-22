@@ -7,60 +7,8 @@
     return new URL(path, scriptUrl).href;
   }
 
-  async function loadSharedHeader() {
-    const header = document.querySelector('header.site-header');
-    if (header) return;
-
-    const pathname = window.location.pathname;
-    // Check if we're at the root of the site (ends with / or /index.html)
-    const isRootPage = pathname.endsWith('/') && !pathname.includes('/', pathname.lastIndexOf('/') + 1);
-    const headerPath = isRootPage ? './_header.html' : '../_header.html';
-
-    try {
-      const response = await fetch(headerPath);
-      if (!response.ok) return;
-      let html = await response.text();
-
-      // Fix relative paths based on page depth
-      if (!isRootPage) {
-        // For subpages, use the second path in data-href-base attributes
-        html = html.replace(/data-href-base="([^,]+),([^"]+)"/g, (match, p1, p2) => {
-          return `data-href-base="${p2}"`;
-        });
-        html = html.replace(/data-src-base="([^,]+),([^"]+)"/g, (match, p1, p2) => {
-          return `data-src-base="${p2}"`;
-        });
-      }
-
-      // Apply the correct paths
-      const parser = new DOMParser();
-      const headerDoc = parser.parseFromString(html, 'text/html');
-
-      // Fix hrefs
-      headerDoc.querySelectorAll('[data-href-base]').forEach(el => {
-        const baseHref = el.getAttribute('data-href-base');
-        if (baseHref) {
-          el.setAttribute('href', baseHref);
-          el.removeAttribute('data-href-base');
-        }
-      });
-
-      // Fix srcs
-      headerDoc.querySelectorAll('[data-src-base]').forEach(el => {
-        const baseSrc = el.getAttribute('data-src-base');
-        if (baseSrc) {
-          el.setAttribute('src', baseSrc);
-          el.removeAttribute('data-src-base');
-        }
-      });
-
-      const main = document.querySelector('main');
-      if (main) {
-        main.insertAdjacentHTML('beforebegin', headerDoc.body.innerHTML);
-      }
-    } catch (e) {
-      console.error('Failed to load header:', e);
-    }
+  function loadSharedHeader() {
+    // Header is embedded directly in HTML files; no dynamic loading needed
   }
 
   function initNavOverlay() {
