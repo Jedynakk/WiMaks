@@ -11,9 +11,10 @@
     const header = document.querySelector('header.site-header');
     if (header) return;
 
-    const pathSegments = window.location.pathname.split('/').filter(Boolean);
-    const isSubpage = pathSegments.length > 0;
-    const headerPath = isSubpage ? '../_header.html' : './_header.html';
+    const pathname = window.location.pathname;
+    // Check if we're at the root of the site (ends with / or /index.html)
+    const isRootPage = pathname.endsWith('/') && !pathname.includes('/', pathname.lastIndexOf('/') + 1);
+    const headerPath = isRootPage ? './_header.html' : '../_header.html';
 
     try {
       const response = await fetch(headerPath);
