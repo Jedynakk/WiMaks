@@ -20,10 +20,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css?v=20260921-30" />
+    <link rel="stylesheet" href="../styles.css?v=20261014-builds1" />
   </head>
   <body>
     <header class="site-header">
@@ -31,7 +31,7 @@
         <a class="brand" href="../" aria-label="Strona główna WiMaks">
           <img
             class="brand-logo"
-            src="../assets/LogoWiMaks.png"
+            src="../assets/wimaks_logo.svg"
             alt="WiMaks"
           />
         </a>
@@ -115,53 +115,38 @@
       </div>
     </div>
 
-    <main>
-      <section class="portfolio-hero" style="background: #ffffff; color: #1a1a1a; padding: 100px 0 40px 0;">
-        <div style="max-width: 1600px; margin: 0 auto; padding: 0 40px;">
-          <h1 style="font-size: 18px; font-weight: 400; letter-spacing: 3px; margin: 0; text-transform: uppercase; font-family: 'Manrope', sans-serif; text-align: center; color: #1a1a1a;">REALIZACJE</h1>
+    <main class="page-realizacje-list">
+      <section class="section realizacje-intro">
+        <div class="container">
+          <h1>Realizacje</h1>
+          <p class="realizacje-lead">69 inwestycji zakończonych od 2015 roku i&nbsp;prowadzonych teraz. Najwięcej z&nbsp;nich to szkoły, budynki mieszkalne i&nbsp;obiekty użyteczności publicznej. Poniżej wybrane realizacje ze zdjęciami i&nbsp;pełna lista z&nbsp;podziałem na kategorie.</p>
         </div>
       </section>
 
-      <section class="portfolio-section" style="background: #ffffff; color: #1a1a1a; padding: 80px 0;">
-        <div style="max-width: 1600px; margin: 0 auto; padding: 0 40px;">
+      <section class="section realizacje-featured" aria-labelledby="realizacje-featured-h">
+        <div class="container">
+          <h2 id="realizacje-featured-h" class="realizacje-heading">Wybrane realizacje</h2>
           <div class="portfolio-grid">
             <article class="portfolio-card">
-              <a href="../realizacje/pkp-olszynka-grochowska/">
-                <div class="portfolio-image" style="background-image: url('../assets/PKP/PKP%20Olszynka%20Grochowska%202.jpg');">
+              <a href="../realizacje/budowa-dworca-kolejowego-koluszki/" aria-label="Budowa dworca kolejowego Koluszki">
+                <div class="portfolio-image" style="background-image: url('../assets/realizacje/koluszki-dworzec.jpg');" role="img" aria-label="Nowy dworzec w Koluszkach z wieżą zegarową, maj 2025">
                   <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                     </svg>
                   </div>
                 </div>
                 <div class="portfolio-label">
-                  <span class="portfolio-title">PKP Olszynka</span>
+                  <span class="portfolio-title">Dworzec Koluszki</span>
                 </div>
               </a>
             </article>
-
             <article class="portfolio-card">
-              <a href="../realizacje/szkola-muzyczna-moniuszki/">
-                <div class="portfolio-image" style="background-image: url('../assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg');">
+              <a href="../realizacje/walendow-osiedle/" aria-label="Osiedle w Walendowie, budynki A1, B1, B2, B3 i A9">
+                <div class="portfolio-image" style="background-image: url('../assets/Walendow%20osiedle%202.jpg');" role="img" aria-label="Budynki wielorodzinne osiedla w Walendowie">
                   <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="portfolio-label">
-                  <span class="portfolio-title">Szkoła Muzyczna</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="portfolio-card">
-              <a href="../realizacje/walendow-osiedle/">
-                <div class="portfolio-image" style="background-image: url('../assets/Walendow%20osiedle%202.jpg');">
-                  <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                     </svg>
@@ -172,28 +157,26 @@
                 </div>
               </a>
             </article>
-
             <article class="portfolio-card">
-              <a href="../realizacje/sp271-warszawa/">
-                <div class="portfolio-image" style="background-image: url('../assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg');">
+              <a href="../realizacje/rozbudowa-szkoly-podstawowej-piekarach-gmina-mszczonow/" aria-label="Rozbudowa Szkoły Podstawowej w Piekarach, Gmina Mszczonów">
+                <div class="portfolio-image" style="background-image: url('../assets/realizacje/piekary-2.jpg');" role="img" aria-label="Rozbudowana Szkoła Podstawowa w Piekarach, widok od strony boiska, kwiecień 2025">
                   <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                     </svg>
                   </div>
                 </div>
                 <div class="portfolio-label">
-                  <span class="portfolio-title">Szkoła nr 271</span>
+                  <span class="portfolio-title">Szkoła w Piekarach</span>
                 </div>
               </a>
             </article>
-
             <article class="portfolio-card">
-              <a href="../realizacje/pkp-olszynka-grochowska/">
-                <div class="portfolio-image" style="background-image: url('../assets/PKP/PKP%20Olszynka%20Grochowska%202.jpg');">
+              <a href="../realizacje/pkp-olszynka-grochowska/" aria-label="PKP Olszynka Grochowska">
+                <div class="portfolio-image" style="background-image: url('../assets/PKP/PKP%20Olszynka%20Grochowska%202.jpg');" role="img" aria-label="Budynek PKP przy stacji Warszawa Olszynka Grochowska">
                   <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                     </svg>
@@ -204,12 +187,11 @@
                 </div>
               </a>
             </article>
-
             <article class="portfolio-card">
-              <a href="../realizacje/szkola-muzyczna-moniuszki/">
-                <div class="portfolio-image" style="background-image: url('../assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg');">
+              <a href="../realizacje/szkola-muzyczna-moniuszki/" aria-label="Termomodernizacja ZSM I st. im. Stanisława Moniuszki w Warszawie">
+                <div class="portfolio-image" style="background-image: url('../assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg');" role="img" aria-label="Budynek Zespołu Szkół Muzycznych im. Stanisława Moniuszki w Warszawie">
                   <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <circle cx="11" cy="11" r="8"></circle>
                       <path d="m21 21-4.35-4.35"></path>
                     </svg>
@@ -217,97 +199,588 @@
                 </div>
                 <div class="portfolio-label">
                   <span class="portfolio-title">Szkoła Muzyczna</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="portfolio-card">
-              <a href="../realizacje/walendow-osiedle/">
-                <div class="portfolio-image" style="background-image: url('../assets/Walendow%20osiedle%202.jpg');">
-                  <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="portfolio-label">
-                  <span class="portfolio-title">Walendów Osiedle</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="portfolio-card">
-              <a href="../realizacje/sp271-warszawa/">
-                <div class="portfolio-image" style="background-image: url('../assets/SP271/e3fc3950d4795350bbc1de3192a2d595.jpg');">
-                  <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="portfolio-label">
-                  <span class="portfolio-title">Szkoła nr 271</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="portfolio-card">
-              <a href="../realizacje/pkp-olszynka-grochowska/">
-                <div class="portfolio-image" style="background-image: url('../assets/PKP/PKP%20Olszynka%20Grochowska%202.jpg');">
-                  <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="portfolio-label">
-                  <span class="portfolio-title">PKP Olszynka</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="portfolio-card">
-              <a href="../realizacje/szkola-muzyczna-moniuszki/">
-                <div class="portfolio-image" style="background-image: url('../assets/SP%20moniuszku/Szkola%20muzyczna%201.jpg');">
-                  <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="portfolio-label">
-                  <span class="portfolio-title">Szkoła Muzyczna</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="portfolio-card">
-              <a href="../realizacje/walendow-osiedle/">
-                <div class="portfolio-image" style="background-image: url('../assets/Walendow%20osiedle%202.jpg');">
-                  <div class="portfolio-overlay">
-                    <svg class="portfolio-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="portfolio-label">
-                  <span class="portfolio-title">Walendów Osiedle</span>
                 </div>
               </a>
             </article>
           </div>
-
         </div>
       </section>
 
+      <section class="section realizacje-all" aria-labelledby="realizacje-all-h">
+        <div class="container">
+          <h2 id="realizacje-all-h" class="realizacje-heading">Wszystkie realizacje</h2>
+          <div class="realizacje-filters" role="group" aria-label="Filtruj według kategorii" data-realizacje-filters>
+            <button type="button" class="realizacje-filter" data-filter="all" aria-pressed="true">Wszystkie <span>69</span></button>
+            <button type="button" class="realizacje-filter" data-filter="obiekty-oswiatowe-edukacyjne" aria-pressed="false">Obiekty oświatowe i edukacyjne <span>16</span></button>
+            <button type="button" class="realizacje-filter" data-filter="budownictwo-mieszkaniowe" aria-pressed="false">Budownictwo mieszkaniowe <span>15</span></button>
+            <button type="button" class="realizacje-filter" data-filter="obiekty-uzytecznosci-publicznej" aria-pressed="false">Obiekty użyteczności publicznej <span>12</span></button>
+            <button type="button" class="realizacje-filter" data-filter="obiekty-naukowe-badawcze" aria-pressed="false">Obiekty naukowe i badawcze <span>8</span></button>
+            <button type="button" class="realizacje-filter" data-filter="infrastruktura-kolejowa" aria-pressed="false">Infrastruktura kolejowa <span>6</span></button>
+            <button type="button" class="realizacje-filter" data-filter="obiekty-medyczne-ochrony-zdrowia" aria-pressed="false">Obiekty medyczne i ochrony zdrowia <span>6</span></button>
+            <button type="button" class="realizacje-filter" data-filter="obiekty-przemyslowe-magazynowe-techniczne" aria-pressed="false">Obiekty przemysłowe, magazynowe i techniczne <span>3</span></button>
+            <button type="button" class="realizacje-filter" data-filter="obiekty-kultury-dziedzictwa" aria-pressed="false">Obiekty kultury i dziedzictwa <span>2</span></button>
+            <button type="button" class="realizacje-filter" data-filter="obiekty-sportowe-rekreacyjne" aria-pressed="false">Obiekty sportowe i rekreacyjne <span>1</span></button>
+          </div>
+          <p class="realizacje-count" aria-live="polite" data-realizacje-count>Pokazano 69 realizacji.</p>
+          <ul class="realizacje-list" data-realizacje-list>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years"></span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-budynku-biurowego-warminsko-mazurskiego-urzedu-wojewodzkiego/">Przebudowa budynku biurowego Warmińsko-Mazurskiego Urzędu Wojewódzkiego w&nbsp;Olsztynie</a>
+                <span class="realizacje-investor">Warmińsko-Mazurski Urząd Wojewódzki</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="infrastruktura-kolejowa">
+              <span class="realizacje-years">2026–2028</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budowa-dworca-kolejowego-opoczno-poludnie/">Budowa dworca kolejowego Opoczno Południe</a>
+                <span class="realizacje-investor">PKP S.A.</span>
+              </span>
+              <span class="realizacje-cat">Infrastruktura kolejowa<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="infrastruktura-kolejowa">
+              <span class="realizacje-years">2026–2028</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budowa-dworca-kolejowego-lomza/">Budowa dworca kolejowego Łomża</a>
+                <span class="realizacje-investor">PKP S.A.</span>
+              </span>
+              <span class="realizacje-cat">Infrastruktura kolejowa<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2026–2028</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-bielanskiego-srodowiskowego-domu-samopomocy-grebalowskiej-14/">Przebudowa Bielańskiego Środowiskowego Domu Samopomocy przy ul. Grębałowskiej 14</a>
+                <span class="realizacje-investor">m.st. Warszawa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2026–2027</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budowa-osmiu-budynkow-wielorodzinnych-sim-gminy-inowroclaw/">Budowa ośmiu budynków wielorodzinnych, SIM Gminy Inowrocław (etap I&nbsp;i&nbsp;II)</a>
+                <span class="realizacje-investor">Społeczna Inicjatywa Mieszkaniowa Gminy Inowrocław</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2026–2027</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./centrum-inicjatyw-mlodziezowych-ostrolece/">Centrum Inicjatyw Młodzieżowych w&nbsp;Ostrołęce</a>
+                <span class="realizacje-investor">Miasto Ostrołęka</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2026–2027</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./remont-budynkow-marii-kazimiery-18-26-warszawie/">Remont budynków przy ul. Marii Kazimiery 18/26 w&nbsp;Warszawie</a>
+                <span class="realizacje-investor">m.st. Warszawa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2025–2027</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-wielorodzinny-garazem-podziemnym-kozienicach/">Budynek wielorodzinny z&nbsp;garażem podziemnym w&nbsp;Kozienicach</a>
+                <span class="realizacje-investor">Społeczna Inicjatywa Mieszkaniowa KZN Mazowsze Centrum Sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2026</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./adaptacja-budynku-miejsca-doraznego-schronienia-gmina-inowroclaw/">Adaptacja budynku na miejsca doraźnego schronienia, Gmina Inowrocław</a>
+                <span class="realizacje-investor">Gmina Inowrocław</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2026</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-biurowo-laboratoryjny-w1w2h-lukasiewicz-instytut-lotnictwa/">Budynek biurowo-laboratoryjny W1W2H, Łukasiewicz – Instytut Lotnictwa</a>
+                <span class="realizacje-investor">Sieć Badawcza Łukasiewicz – Instytut Lotnictwa, Warszawa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2025–2026</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-mieszkalny-1-pruszkowie-tbs-zielen-miejska/">Budynek mieszkalny nr 1 w&nbsp;Pruszkowie, TBS „Zieleń Miejska”</a>
+                <span class="realizacje-investor">Towarzystwo Budownictwa Społecznego „Zieleń Miejska” sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2025–2026</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./zespol-budynkow-wielorodzinnych-lipowej-8-bakowce/">Zespół budynków wielorodzinnych przy ul. Lipowej 8 w&nbsp;Bąkówce</a>
+                <span class="realizacje-investor">Gmina Piaseczno</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2024–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./remont-powlok-tunelu-aerodynamicznego-t-3-lukasiewicz/">Remont powłok tunelu aerodynamicznego T-3, Łukasiewicz – Instytut Lotnictwa</a>
+                <span class="realizacje-investor">Sieć Badawcza Łukasiewicz – Instytut Lotnictwa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze<span class="realizacje-status">W realizacji</span></span>
+            </li>
+            <li class="realizacje-row" data-category="infrastruktura-kolejowa">
+              <span class="realizacje-years">2023–2026</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-dworca-kolejowego-brwinow-projektuj-buduj/">Przebudowa dworca kolejowego Brwinów (projektuj i&nbsp;buduj)</a>
+                <span class="realizacje-investor">PKP S.A.</span>
+              </span>
+              <span class="realizacje-cat">Infrastruktura kolejowa</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2024–2026</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-wielorodzinny-czadrowie/">Budynek wielorodzinny w&nbsp;Czadrowie</a>
+                <span class="realizacje-investor">Towarzystwo Budownictwa Społecznego „TBS” Sp. z&nbsp;o.o. (Kamienna Góra)</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2023–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./zespol-budynkow-mickiewicza-45bj-jaworze/">Zespół budynków przy ul. Mickiewicza 45B–J w&nbsp;Jaworze</a>
+                <span class="realizacje-investor">Towarzystwo Budownictwa Społecznego „TBS” Sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2024–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./remont-przebudowa-budynku-biurowo-laboratoryjnego-c-cd/">Remont i&nbsp;przebudowa budynku biurowo-laboratoryjnego C, CD, D, H4, Łukasiewicz – Instytut Lotnictwa</a>
+                <span class="realizacje-investor">Sieć Badawcza Łukasiewicz – Instytut Lotnictwa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2024–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynki-160-161-piotrkowskiej-gdansku/">Budynki nr 160 i&nbsp;161 przy ul. Piotrkowskiej w&nbsp;Gdańsku</a>
+                <span class="realizacje-investor">Gdańskie Towarzystwo Budownictwa Społecznego Sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2023–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./sala-gimnastyczna-szkole-zbroszy-duzej/">Sala gimnastyczna przy szkole w&nbsp;Zbroszy Dużej</a>
+                <span class="realizacje-investor">Gmina Jasieniec</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2023–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynki-b11-b2-wiazowskiej-95-jozefowie/">Budynki B11 i&nbsp;B2 przy ul. Wiązowskiej 95 w&nbsp;Józefowie</a>
+                <span class="realizacje-investor">Miasto Józefów</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-pomieszczenia-magazynowego-budynku-15-lukasiewicz-ipo/">Przebudowa pomieszczenia magazynowego w&nbsp;budynku nr 15, Łukasiewicz – IPO</a>
+                <span class="realizacje-investor">Sieć Badawcza Łukasiewicz – Instytut Przemysłu Organicznego</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze</span>
+            </li>
+            <li class="realizacje-row" data-category="infrastruktura-kolejowa">
+              <span class="realizacje-years">2023–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budowa-dworca-kolejowego-koluszki/">Budowa dworca kolejowego Koluszki</a>
+                <span class="realizacje-investor">PKP S.A.</span>
+              </span>
+              <span class="realizacje-cat">Infrastruktura kolejowa</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2023–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-mieszkalny-malczewskiego-gdansku/">Budynek mieszkalny przy ul. Malczewskiego w&nbsp;Gdańsku</a>
+                <span class="realizacje-investor">Przemysłówka Przedsiębiorstwo Budowlano-Przemysłowe Holding Sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-przemyslowe-magazynowe-techniczne">
+              <span class="realizacje-years">2023–2025</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-magazynowy-czescia-biurowo-socjalna-przemyslowka-pbp/">Budynek magazynowy z&nbsp;częścią biurowo-socjalną, Przemysłówka PBP Holding</a>
+                <span class="realizacje-investor">Przemysłówka PBP Holding Sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Obiekty przemysłowe, magazynowe i techniczne</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2022–2024</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-mieszkalny-wielorodzinny-cyrulikow-rembertow/">Budynek mieszkalny wielorodzinny przy ul. Cyrulików, Rembertów</a>
+                <span class="realizacje-investor">m.st. Warszawa – Dzielnica Rembertów</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-przemyslowe-magazynowe-techniczne">
+              <span class="realizacje-years">2023–2024</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./punkt-selektywnej-zbiorki-odpadow-komunalnych-gminie-izabelin/">Punkt Selektywnej Zbiórki Odpadów Komunalnych w&nbsp;Gminie Izabelin</a>
+                <span class="realizacje-investor">Gmina Izabelin</span>
+              </span>
+              <span class="realizacje-cat">Obiekty przemysłowe, magazynowe i techniczne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-medyczne-ochrony-zdrowia">
+              <span class="realizacje-years">2023–2024</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-spzoz-tarczynie/">Rozbudowa SPZOZ w&nbsp;Tarczynie</a>
+                <span class="realizacje-investor">Gmina Tarczyn</span>
+              </span>
+              <span class="realizacje-cat">Obiekty medyczne i ochrony zdrowia</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-kultury-dziedzictwa">
+              <span class="realizacje-years">2022–2024</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rewitalizacja-zabytkowych-budynkow-poprzemyslowych-jozefowie-gm-ozarow/">Rewitalizacja zabytkowych budynków poprzemysłowych w&nbsp;Józefowie (gm. Ożarów Mazowiecki)</a>
+                <span class="realizacje-investor">Gmina Ożarów Mazowiecki</span>
+              </span>
+              <span class="realizacje-cat">Obiekty kultury i dziedzictwa</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-medyczne-ochrony-zdrowia">
+              <span class="realizacje-years">2023–2024</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-skrzydla-zachodniego-centralnego-pawilonu-glownego-etap/">Przebudowa skrzydła zachodniego i&nbsp;centralnego Pawilonu Głównego (etap 1A), MCLChPiG w&nbsp;Otwocku</a>
+                <span class="realizacje-investor">Mazowieckie Centrum Leczenia Chorób Płuc i&nbsp;Gruźlicy w&nbsp;Otwocku</span>
+              </span>
+              <span class="realizacje-cat">Obiekty medyczne i ochrony zdrowia</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2020–2024</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./walendow-osiedle/">Osiedle w&nbsp;Walendowie, budynki A1, B1, B2, B3 i&nbsp;A9</a>
+                <span class="realizacje-investor">Przemysłówka Przedsiębiorstwo Budownictwa Przemysłowego Holding Sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./powiatowe-centrum-opiekunczo-mieszkalne-brwinowie/">Powiatowe Centrum Opiekuńczo-Mieszkalne w&nbsp;Brwinowie</a>
+                <span class="realizacje-investor">Powiat Pruszkowski</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./modernizacja-budynku-dydaktyczno-szkoleniowego-bspiir-akademii-pozarniczej/">Modernizacja budynku dydaktyczno-szkoleniowego w&nbsp;BSPiIR Akademii Pożarniczej</a>
+                <span class="realizacje-investor">Akademia Pożarnicza</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./modernizacja-domu-pomocy-spolecznej-gorze-kalwarii-szpitalna/">Modernizacja Domu Pomocy Społecznej w&nbsp;Górze Kalwarii, ul. Szpitalna 1</a>
+                <span class="realizacje-investor">Powiat Piaseczyński – Starostwo Powiatowe w&nbsp;Piasecznie</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-medyczne-ochrony-zdrowia">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./modernizacja-kliniki-psychiatrii-dzieci-mlodziezy-ipin/">Modernizacja Kliniki Psychiatrii Dzieci i&nbsp;Młodzieży IPiN</a>
+                <span class="realizacje-investor">Instytut Psychiatrii i&nbsp;Neurologii w&nbsp;Warszawie</span>
+              </span>
+              <span class="realizacje-cat">Obiekty medyczne i ochrony zdrowia</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-szkoly-podstawowej-piekarach-gmina-mszczonow/">Rozbudowa Szkoły Podstawowej w&nbsp;Piekarach, Gmina Mszczonów</a>
+                <span class="realizacje-investor">Gmina Mszczonów</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./sp271-warszawa/">Szkoła Podstawowa nr 271 w&nbsp;Warszawie</a>
+                <span class="realizacje-investor">m.st. Warszawa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="infrastruktura-kolejowa">
+              <span class="realizacje-years">2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./pkp-olszynka-grochowska/">PKP Olszynka Grochowska</a>
+                <span class="realizacje-investor">PKP S.A.</span>
+              </span>
+              <span class="realizacje-cat">Infrastruktura kolejowa</span>
+            </li>
+            <li class="realizacje-row" data-category="infrastruktura-kolejowa">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-dworca-kolejowego-pionki-zachodnie/">Przebudowa dworca kolejowego Pionki Zachodnie</a>
+                <span class="realizacje-investor">PKP S.A.</span>
+              </span>
+              <span class="realizacje-cat">Infrastruktura kolejowa</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./winda-osob-niepelnosprawnych-starostwie-powiatowym-ozarowie-mazowieckim/">Winda dla osób niepełnosprawnych w&nbsp;Starostwie Powiatowym w&nbsp;Ożarowie Mazowieckim</a>
+                <span class="realizacje-investor">Starosta Powiatu Warszawskiego Zachodniego</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./modernizacja-energetyczna-budynku-laboratoryjnego-5-lukasiewicz-ipo/">Modernizacja energetyczna budynku laboratoryjnego nr 5, Łukasiewicz – IPO</a>
+                <span class="realizacje-investor">Sieć Badawcza Łukasiewicz – Instytut Przemysłu Organicznego, Warszawa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2021–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./budynek-komunalny-stepkowskiego-tarczynie/">Budynek komunalny przy ul. Stępkowskiego w&nbsp;Tarczynie</a>
+                <span class="realizacje-investor">Gmina Tarczyn</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./klimatyzacja-budynku-b-obiektu-02-sgsp-siemiradzkiego/">Klimatyzacja w&nbsp;budynku B obiektu 02 SGSP przy ul. Siemiradzkiego 2</a>
+                <span class="realizacje-investor">Szkoła Główna Służby Pożarniczej</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./wzrost-efektywnosci-energetycznej-obiektu-02-sgsp-siemiradzkiego/">Wzrost efektywności energetycznej obiektu 02 SGSP przy ul. Siemiradzkiego 2</a>
+                <span class="realizacje-investor">Szkoła Główna Służby Pożarniczej</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-medyczne-ochrony-zdrowia">
+              <span class="realizacje-years">2022–2023</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./oddzial-rehabilitacji-neurologicznej-ipin-dostosowanie-rehabilitacji-pocovidowej/">Oddział Rehabilitacji Neurologicznej IPiN, dostosowanie do rehabilitacji pocovidowej</a>
+                <span class="realizacje-investor">Instytut Psychiatrii i&nbsp;Neurologii w&nbsp;Warszawie</span>
+              </span>
+              <span class="realizacje-cat">Obiekty medyczne i ochrony zdrowia</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-medyczne-ochrony-zdrowia">
+              <span class="realizacje-years">2022</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./mokotowskie-srodowiskowe-centrum-zdrowia-psychicznego-dzieci-mlodziezy/">Mokotowskie Środowiskowe Centrum Zdrowia Psychicznego dla dzieci i&nbsp;młodzieży, ul. Goplańska 44</a>
+                <span class="realizacje-investor">Instytut Psychiatrii i&nbsp;Neurologii</span>
+              </span>
+              <span class="realizacje-cat">Obiekty medyczne i ochrony zdrowia</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-sportowe-rekreacyjne">
+              <span class="realizacje-years">2021–2022</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-basenu-kapry-pruszkowie/">Termomodernizacja basenu Kapry w&nbsp;Pruszkowie</a>
+                <span class="realizacje-investor">Miasto Pruszków</span>
+              </span>
+              <span class="realizacje-cat">Obiekty sportowe i rekreacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2021</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-szkoly-podstawowej-8-pruszkowie/">Termomodernizacja Szkoły Podstawowej nr 8 w&nbsp;Pruszkowie</a>
+                <span class="realizacje-investor">Miasto Pruszków</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-kultury-dziedzictwa">
+              <span class="realizacje-years">2019–2021</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./muzeum-wycinanki-polskiej-przebudowa-domu-ludowego-konstancinie/">Muzeum Wycinanki Polskiej, przebudowa Domu Ludowego w&nbsp;Konstancinie-Jeziornie</a>
+                <span class="realizacje-investor">Konstanciński Dom Kultury</span>
+              </span>
+              <span class="realizacje-cat">Obiekty kultury i dziedzictwa</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-przemyslowe-magazynowe-techniczne">
+              <span class="realizacje-years">2020–2021</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-hali-akropolis-hali-wydzialu-plynow-reckitt/">Rozbudowa hali AKROPOLIS i&nbsp;hali wydziału płynów, Reckitt Benckiser, Nowy Dwór Mazowiecki</a>
+                <span class="realizacje-investor">Przemysłówka PBP Holding Sp. z&nbsp;o.o. (dla Reckitt Benckiser)</span>
+              </span>
+              <span class="realizacje-cat">Obiekty przemysłowe, magazynowe i techniczne</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2020</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-budynkow-okulickiego-elblagu/">Termomodernizacja budynków przy ul. Okulickiego w&nbsp;Elblągu</a>
+                <span class="realizacje-investor">Spółdzielnia Mieszkaniowa „Zakrzewo” w&nbsp;Elblągu</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2018–2020</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-budynku-uzytecznosci-publicznej-kepie-okrzewskiej/">Rozbudowa budynku użyteczności publicznej w&nbsp;Kępie Okrzewskiej</a>
+                <span class="realizacje-investor">Urząd Miasta i&nbsp;Gminy Konstancin-Jeziorna</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2018–2020</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-przebudowa-budynku-osp-biblioteki-miejskiej-konstancinie/">Rozbudowa i&nbsp;przebudowa budynku OSP i&nbsp;Biblioteki Miejskiej w&nbsp;Konstancinie-Jeziornie</a>
+                <span class="realizacje-investor">Urząd Miasta i&nbsp;Gminy Konstancin-Jeziorna</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2019–2020</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./noclegownia-ogrzewalnia-kaczorowej-39-warszawie/">Noclegownia i&nbsp;ogrzewalnia przy ul. Kaczorowej 39 w&nbsp;Warszawie</a>
+                <span class="realizacje-investor">Zarząd Mienia m.st. Warszawy / m.st. Warszawa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2019</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-budynkow-naroznej-2-3-konstancinie-jeziornie/">Termomodernizacja budynków przy ul. Narożnej 2 i&nbsp;3 w&nbsp;Konstancinie-Jeziornie</a>
+                <span class="realizacje-investor">Spółdzielnia Mieszkaniowa Lokatorsko-Własnościowa Konstancin-Jeziorna</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-uzytecznosci-publicznej">
+              <span class="realizacje-years">2019</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-budynku-po-jednostce-wojskowej-gorze-kalwarii/">Przebudowa budynku po jednostce wojskowej w&nbsp;Górze Kalwarii na poradnię psychologiczną</a>
+                <span class="realizacje-investor">Starostwo Powiatowe w&nbsp;Piasecznie</span>
+              </span>
+              <span class="realizacje-cat">Obiekty użyteczności publicznej</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2019</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-budynkow-94-112-akademia-sztuki-wojennej/">Termomodernizacja budynków nr 94 i&nbsp;112, Akademia Sztuki Wojennej</a>
+                <span class="realizacje-investor">Akademia Sztuki Wojennej</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2019</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-poradni-psychologiczno-pedagogicznej-16-siennickiej-40/">Termomodernizacja Poradni Psychologiczno-Pedagogicznej nr 16 przy ul. Siennickiej 40</a>
+                <span class="realizacje-investor">m.st. Warszawa – Dzielnica Praga-Południe</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="budownictwo-mieszkaniowe">
+              <span class="realizacje-years">2019</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./prace-elewacyjne-budynku-wielorodzinnego-ciechanowie/">Prace elewacyjne budynku wielorodzinnego w&nbsp;Ciechanowie</a>
+                <span class="realizacje-investor">Przemysłówka PBP Holding Sp. z&nbsp;o.o.</span>
+              </span>
+              <span class="realizacje-cat">Budownictwo mieszkaniowe</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2018–2019</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./szkola-muzyczna-moniuszki/">Termomodernizacja ZSM I&nbsp;st. im. Stanisława Moniuszki w&nbsp;Warszawie</a>
+                <span class="realizacje-investor">Ministerstwo Kultury i&nbsp;Dziedzictwa Narodowego – Centrum Edukacji Artystycznej</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2017–2019</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-8-budynkow-instytutu-kolejnictwa-warszawie/">Termomodernizacja 8 budynków Instytutu Kolejnictwa w&nbsp;Warszawie</a>
+                <span class="realizacje-investor">Instytut Kolejnictwa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2017–2018</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./hala-badawcza-cnbop-pib-jozefowie/">Hala Badawcza CNBOP-PIB w&nbsp;Józefowie</a>
+                <span class="realizacje-investor">Centrum Naukowo-Badawcze Ochrony Przeciwpożarowej im. Józefa Tuliszkowskiego – Państwowy Instytut Badawczy</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2017–2018</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-szkoly-podstawowej-358-ledochowskiej-wilanow/">Rozbudowa Szkoły Podstawowej nr 358 przy ul. Ledóchowskiej, Wilanów</a>
+                <span class="realizacje-investor">m.st. Warszawa – Dzielnica Wilanów</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2018</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-zespolu-szkol-3-joliot-curie-13/">Termomodernizacja Zespołu Szkół nr 3 przy ul. Joliot-Curie 13</a>
+                <span class="realizacje-investor">m.st. Warszawa – Dzielnica Mokotów</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2017–2018</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacja-lxx-lo-dembowskiego-1/">Termomodernizacja LXX LO przy ul. Dembowskiego 1</a>
+                <span class="realizacje-investor">m.st. Warszawa – Dzielnica Ursynów</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-naukowe-badawcze">
+              <span class="realizacje-years">2017–2018</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./przebudowa-budynku-d1-instytut-lotnictwa/">Przebudowa budynku D1, Instytut Lotnictwa</a>
+                <span class="realizacje-investor">Instytut Lotnictwa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty naukowe i badawcze</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2016–2017</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-szkoly-podstawowej-100-tanecznej-54-58/">Rozbudowa Szkoły Podstawowej nr 100 przy ul. Tanecznej 54/58</a>
+                <span class="realizacje-investor">m.st. Warszawa – Dzielnica Ursynów</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2016</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./remont-budynku-ckziu-1-ks-janusza-45/">Remont budynku CKZiU nr 1 przy ul. Ks. Janusza 45/47</a>
+                <span class="realizacje-investor">m.st. Warszawa</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-oswiatowe-edukacyjne">
+              <span class="realizacje-years">2015–2016</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./termomodernizacje-szkol-warszawa/">Termomodernizacje szkół podstawowych nr 58, 271 i&nbsp;293 w&nbsp;Warszawie</a>
+                <span class="realizacje-investor">m.st. Warszawa (dzielnice Targówek, Mokotów i&nbsp;Bielany)</span>
+              </span>
+              <span class="realizacje-cat">Obiekty oświatowe i edukacyjne</span>
+            </li>
+            <li class="realizacje-row" data-category="obiekty-medyczne-ochrony-zdrowia">
+              <span class="realizacje-years">2016</span>
+              <span class="realizacje-main">
+                <a class="realizacje-link" href="./rozbudowa-modernizacja-przychodni-szpzlo-warszawa-ochota/">Rozbudowa i&nbsp;modernizacja przychodni SZPZLO Warszawa-Ochota</a>
+                <span class="realizacje-investor">Samodzielny Zespół Publicznych Zakładów Lecznictwa Otwartego Warszawa-Ochota</span>
+              </span>
+              <span class="realizacje-cat">Obiekty medyczne i ochrony zdrowia</span>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
 	    <footer class="site-footer" data-site-footer></footer>
-    <script src="../site.js?v=20260921-18"></script>
+    <script src="../site.js?v=20261014-real1"></script>
   </body>
 </html>

@@ -20,15 +20,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css?v=20260921-27" />
+    <link rel="stylesheet" href="../styles.css?v=20261014-builds1" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-row">
-        <a class="brand" href="../"><img class="brand-logo" src="../assets/LogoWiMaks.png" alt="WiMaks"/></a>
+        <a class="brand" href="../"><img class="brand-logo" src="../assets/wimaks_logo.svg" alt="WiMaks"/></a>
         <nav class="main-nav"><button class="nav-dropdown-toggle" type="button" data-nav-overlay-open aria-haspopup="dialog" aria-controls="nav-overlay" aria-expanded="false">O nas <span class="nav-caret" aria-hidden="true"></span></button>
           <a href="../realizacje/">Realizacje</a><a href="../oferta/">Oferta</a><a href="../podwykonawcy/">Dla podwykonawców</a><a href="../oferty-pracy/">Oferty pracy</a><a href="../kontakt/">Kontakt</a>
         </nav>
@@ -83,24 +83,18 @@
       </div>
     </div>
 
-    <main>
-      <section class="section" style="padding: 100px 0 60px;">
-        <div class="container" style="max-width: 760px; text-align: center;">
-          <h1 style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; letter-spacing: 0; margin: 0 0 2rem; line-height: 1.2;">Dołącz do zespołu realizującego ciekawe inwestycje budowlane.</h1>
-          <p style="font-size: 1rem; line-height: 1.6; color: #666; margin: 0;">
-            Jesteśmy firmą wykonawczą działającą w branży budowlanej, o szerokim
-            wachlarzu usług. W związku z dynamicznym rozwojem firmy chcemy
-            poszerzyć naszą kadrę o ambitne i odpowiedzialne osoby, które chcą
-            uczestniczyć w realizacji ciekawych obiektów.
-          </p>
+    <main class="v2 page-jobs-v2">
+      <section class="page-intro-v2" aria-labelledby="jobs-title">
+        <div class="container">
+          <h1 id="jobs-title">Dołącz do zespołu realizującego ciekawe inwestycje budowlane.</h1>
+          <p>Jesteśmy firmą wykonawczą działającą w&nbsp;branży budowlanej, o&nbsp;szerokim wachlarzu usług. W&nbsp;związku z&nbsp;dynamicznym rozwojem firmy chcemy poszerzyć naszą kadrę o&nbsp;ambitne i&nbsp;odpowiedzialne osoby, które chcą uczestniczyć w&nbsp;realizacji ciekawych obiektów.</p>
         </div>
       </section>
 
-      <section class="section section-alt" aria-labelledby="jobs-list-title">
+      <section class="section" aria-labelledby="jobs-list-title">
         <div class="container">
-          <div class="section-heading section-heading-left jobs-section-heading">
-            <p class="eyebrow">Aktualne ogłoszenia</p>
-            <h2 id="jobs-list-title">Prowadzimy nabór na następujące stanowiska.</h2>
+          <div class="jobs-section-heading">
+            <h2 id="jobs-list-title" class="title-rule">Prowadzimy nabór na następujące stanowiska.</h2>
           </div>
 
 	          <div class="jobs-results-meta">
@@ -328,30 +322,20 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="recruitment-title">
-        <div class="container">
-          <div class="jobs-footer-grid">
-            <div class="content-card jobs-footer-card">
-              <p class="eyebrow">Etapy rekrutacji</p>
-              <h2 id="recruitment-title">Jak wygląda proces</h2>
-              <ol class="job-steps">
-                <li>Przesłanie CV</li>
-                <li>Spotkanie rekrutacyjne</li>
-                <li>Decyzja o współpracy</li>
-              </ol>
-              <p class="jobs-note">Dołącz do naszego zespołu i twórz z nami wyjątkową jakość.</p>
-            </div>
-
-            <div class="content-card jobs-footer-card">
-              <p class="eyebrow">Zgoda do aplikacji</p>
-              <h2>Informacja dla kandydatów</h2>
-              <p class="jobs-note">
-                Prosimy o przesłanie Państwa aplikacji wraz z następującą zgodą / zgodami:
-              </p>
-              <p class="jobs-consent">
-                Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbędnych do realizacji procesu rekrutacji, zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku oraz ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. U. 2018 poz.1000)
-              </p>
-            </div>
+      <section class="section jobs-info-v2" aria-labelledby="recruitment-title">
+        <div class="container jobs-info-grid">
+          <div>
+            <h2 id="recruitment-title" class="title-rule">Etapy rekrutacji</h2>
+            <ol class="jobs-steps-v2">
+              <li>Przesłanie CV</li>
+              <li>Spotkanie rekrutacyjne</li>
+              <li>Decyzja o&nbsp;współpracy</li>
+            </ol>
+          </div>
+          <div>
+            <h2 class="title-rule">Informacja dla kandydatów</h2>
+            <p class="jobs-info-note">Prosimy o&nbsp;przesłanie aplikacji wraz z&nbsp;następującą zgodą:</p>
+            <p class="jobs-info-consent">Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbędnych do realizacji procesu rekrutacji, zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku oraz ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. U. 2018 poz.1000)</p>
           </div>
         </div>
       </section>
@@ -372,7 +356,6 @@
           ×
         </button>
         <div class="apply-modal-copy">
-          <p class="eyebrow">Aplikuj</p>
           <h2 id="apply-modal-title">Formularz aplikacyjny</h2>
           <p>
             Wypełnij formularz, dodaj CV i prześlij zgłoszenie na wybrane stanowisko.
@@ -403,9 +386,9 @@
             <input type="tel" name="phone" placeholder="+48 000 000 000" required />
           </label>
 	          <label>
-	            <span class="sr-only">Stanowisko</span>
-	            <input type="text" id="apply-position-visible" readonly />
-	          </label>
+            Stanowisko
+            <input type="text" id="apply-position-visible" readonly />
+          </label>
           <label>
             Lokalizacja
             <input type="text" id="apply-location-visible" readonly />
@@ -418,7 +401,7 @@
             Dodatkowa wiadomość
             <textarea
               name="message"
-              rows="4"
+              rows="3"
               placeholder="Napisz kilka słów o swoim doświadczeniu."
             ></textarea>
           </label>
@@ -481,6 +464,6 @@
         }
       });
     </script>
-    <script src="../site.js?v=20260921-18"></script>
+    <script src="../site.js?v=20261014-real1"></script>
   </body>
 </html>

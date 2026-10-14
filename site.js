@@ -129,6 +129,12 @@
       }
       renderOverlayContent();
       lastActive = document.activeElement;
+      // Panel zaczyna się dokładnie pod dolną krawędzią nagłówka, bez szczeliny.
+      const header = document.querySelector(".site-header");
+      if (header) overlay.style.top = `${Math.round(header.getBoundingClientRect().bottom)}px`;
+      // Na komputerze lista otwiera się pod przyciskiem „O nas”.
+      const toggle = document.querySelector(".nav-dropdown-toggle");
+      if (toggle) overlay.style.setProperty("--dd-left", `${Math.round(toggle.getBoundingClientRect().left) - 20}px`);
       overlay.hidden = false;
       document.body.classList.add("modal-open");
       setExpanded(true);
@@ -136,7 +142,9 @@
       // Allow the browser to paint before toggling the transition class.
       requestAnimationFrame(() => overlay.classList.add("is-open"));
 
-      const first = overlay.querySelector(focusableSelector);
+      const first =
+        overlay.querySelector(".nav-overlay-content a[href], .nav-overlay-content button") ||
+        overlay.querySelector(focusableSelector);
       if (first) first.focus();
     }
 
@@ -650,6 +658,122 @@
     }, 190);
   }
 
+  function initReveal() {
+    const items = Array.from(document.querySelectorAll("[data-reveal]"));
+    if (items.length === 0) return;
+
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((el) => el.classList.add("is-revealed"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
+    );
+
+    items.forEach((el) => observer.observe(el));
+  }
+
+  function initNewsCarousel() {
+    const root = document.querySelector("[data-news-carousel]");
+    if (!root) return;
+
+    const track = root.querySelector("[data-news-track]");
+    const prevBtn = root.querySelector("[data-news-prev]");
+    const nextBtn = root.querySelector("[data-news-next]");
+    if (!(track instanceof HTMLElement) || !prevBtn || !nextBtn) return;
+
+    const slides = Array.from(track.children);
+    if (slides.length === 0) return;
+
+    function step(direction) {
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      track.scrollBy({ left: direction * (slides[0].offsetWidth + gap) });
+    }
+
+    prevBtn.addEventListener("click", () => step(-1));
+    nextBtn.addEventListener("click", () => step(1));
+
+    track.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        step(-1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        step(1);
+      }
+    });
+
+    // Stan przycisków z widoczności pierwszego i ostatniego slajdu, bez nasłuchu scroll.
+    if (!("IntersectionObserver" in window)) return;
+    const first = slides[0];
+    const last = slides[slides.length - 1];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const atEdge = entry.intersectionRatio > 0.95;
+          if (entry.target === first) prevBtn.disabled = atEdge;
+          if (entry.target === last) nextBtn.disabled = atEdge;
+        });
+      },
+      { root: track, threshold: [0, 0.95, 1] },
+    );
+    observer.observe(first);
+    observer.observe(last);
+  }
+
+  // Akordeon obszarów: aktywny panel ustawiany z JS, a nie przez :hover.
+  // Dzięki temu przejazd kursorem przez odstęp między panelami nie zwija
+  // wszystkich naraz, a po zjechaniu kursorem zostaje ostatnio wybrany panel.
+  function initAreasAccordion() {
+    const root = document.querySelector(".areas-accordion");
+    if (!root) return;
+    const panels = Array.from(root.querySelectorAll(".areas-panel"));
+    const activate = (panel) => {
+      if (panel.classList.contains("is-active")) return;
+      panels.forEach((p) => p.classList.toggle("is-active", p === panel));
+    };
+    panels.forEach((panel) => {
+      panel.addEventListener("pointerenter", (e) => {
+        if (e.pointerType === "mouse") activate(panel);
+      });
+      panel.addEventListener("focus", () => activate(panel));
+    });
+  }
+
+  function initRealizacjeFilter() {
+    const group = document.querySelector("[data-realizacje-filters]");
+    const list = document.querySelector("[data-realizacje-list]");
+    if (!group || !list) return;
+    const buttons = Array.from(group.querySelectorAll("[data-filter]"));
+    const rows = Array.from(list.querySelectorAll("[data-category]"));
+    const count = document.querySelector("[data-realizacje-count]");
+
+    function apply(filter) {
+      let shown = 0;
+      rows.forEach((row) => {
+        const match = filter === "all" || row.getAttribute("data-category") === filter;
+        row.hidden = !match;
+        if (match) shown += 1;
+      });
+      buttons.forEach((b) => {
+        b.setAttribute("aria-pressed", String(b.getAttribute("data-filter") === filter));
+      });
+      if (count) count.textContent = `Pokazano ${shown} z ${rows.length} realizacji.`;
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => apply(btn.getAttribute("data-filter") || "all"));
+    });
+  }
+
   async function init() {
     await loadSharedHeader();
     initNavOverlay();
@@ -657,8 +781,12 @@
     initFooter();
     initOfferTabs();
     initCarousels();
+    initNewsCarousel();
+    initAreasAccordion();
     initGalleries();
+    initRealizacjeFilter();
     initJobAccordions();
+    initReveal();
   }
 
   if (document.readyState === "loading") {

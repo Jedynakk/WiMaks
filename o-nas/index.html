@@ -20,10 +20,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css?v=20260921-27" />
+    <link rel="stylesheet" href="../styles.css?v=20261014-builds1" />
   </head>
   <body>
     <header class="site-header">
@@ -31,7 +31,7 @@
         <a class="brand" href="../" aria-label="Strona główna WiMaks">
           <img
             class="brand-logo"
-            src="../assets/LogoWiMaks.png"
+            src="../assets/wimaks_logo.svg"
             alt="WiMaks"
           />
         </a>
@@ -80,118 +80,79 @@
       </div>
     </div>
 
-    <main>
-      <section class="section about-hero">
-        <div class="container about-hero-grid">
-	          <div class="about-hero-copy">
-	            <h1>Generalny wykonawca i projektant inwestycji budowlanych.</h1>
-	            <p class="lead">
-	              Działamy na rynku budowlanym od 2007 roku, zdobywając doświadczenie i zaufanie klientów na terenie całej Polski. Jako kompleksowy wykonawca i projektant inwestycji budowlanych realizujemy zaawansowane projekty budowlane dla obiektów użyteczności publicznej, kompleksów przemysłowych oraz budynków mieszkaniowych wielorodzinnych. Nasze usługi obejmują pełny zakres zarządzania projektami budowlanymi, od fazy projektowania, przez koordynację robót, aż do ostatecznych odbiorów i uruchomienia inwestycji.
-	            </p>
-	          </div>
-	          <div class="about-hero-media">
-	            <img
-	              src="../assets/Budowa%20budynku%20mieszkalnego%20wielorodzinnego%20przy%20ul.%20Cyrulikow.jpg"
-	              alt="Budowa budynku mieszkalnego wielorodzinnego przy ul. Cyrulików"
-	              loading="lazy"
-	            />
-	          </div>
-	        </div>
-	      </section>
-
-      <section class="section" aria-labelledby="about-values-title">
-        <div class="container">
-          <div class="section-heading section-heading-left">
-            <h2 id="about-values-title">Jak pracujemy</h2>
-          </div>
-
-          <div class="about-features">
-            <article class="about-feature">
-              <div class="about-feature-media" aria-hidden="true">
-                <img src="../assets/baner.jpg" alt="" loading="lazy" />
-              </div>
-              <div class="about-feature-copy">
-                <h3>Nasz cel i podejście</h3>
-                <p>
-                  Naszym głównym celem jest sprostanie każdemu wyzwaniu budowlanemu, niezależnie od jego skali czy złożoności — od projektów standardowych po bardzo indywidualne i nietypowe przedsięwzięcia. Każde zlecenie traktujemy jako nowe zadanie wymagające zaangażowania i analitycznego podejścia. Szczegółowo analizujemy potrzeby inwestora i wymagania projektu, poszukujemy optymalnych rozwiązań technicznych i ekonomicznych, a następnie dopasowujemy strategie realizacji do specyfiki i charakteru obiektu. Stawiamy na autentyczną, partnerską współpracę, precyzyjne ustalenia i pełną odpowiedzialność za jakość wykonanych robót. Kombinując szerokie doświadczenie branżowe, sprawną organizację procesów budowlanych i profesjonalny nadzór jakości, zapewniamy terminową realizację projektów w pełnej zgodzie z wcześniej uzgodnionym standardem. Satysfakcja i zadowolenie naszego Klienta stanowi najważniejszą miarę naszego sukcesu.
-                </p>
-              </div>
-            </article>
-
-            <article class="about-feature about-feature-reverse about-feature-doc">
-              <div class="about-feature-media" aria-hidden="true">
-                <img src="../assets/referencje/ref6.jpg" alt="" loading="lazy" />
-              </div>
-              <div class="about-feature-copy">
-                <h3>Nasze priorytety i wartości</h3>
-                <p>
-                  Najwyższą naszą prioritetą jest konsekwentna jakość realizowanych usług budowlanych, ponieważ rekomendacja naszej firmy przez zadowolonego klienta stanowi dla nas najlepszą i najbardziej wartościową formę promocji. Dlatego inwestujemy w przejrzystą komunikację na każdym etapie projektu, precyzyjne przestrzeganie uzgodnionych harmonogramów robót oraz ciągłą, ścisłą kontrolę jakości każdej fazy wykonania, gwarantując powtarzalny i niezmienny standard profesjonalnych usług. Konsekwentnie stawiamy na współpracę z doświadczonymi i rzetelnymi partnerami, sprawdzone i nowoczesne rozwiązania techniczne oraz materiały wysokiej jakości. Każdy projekt budowlany realizujemy z wyjątkową dbałością o bezpieczeństwo pracowników i otoczenia, utrzymanie porządku i czystości na terenie budowy, ścisłą zgodność z dokumentacją projektową oraz pełne spełnienie wszystkich wymagań i oczekiwań inwestora. Wysoką jakość naszych kompleksowych usług budowlanych poświadczają liczne referencje od zadowolonych klientów z całej Polski.
-                </p>
-                <a class="inline-link" href="../referencje/">Zobacz nasze referencje</a>
-              </div>
-            </article>
-
+    <main class="v2 about-v2">
+      <section class="hero-split about-hero-v2" aria-labelledby="about-title">
+        <figure class="hero-split-media">
+          <img src="../assets/Budowa%20budynku%20mieszkalnego%20wielorodzinnego%20przy%20ul.%20Cyrulikow.jpg" alt="Budowa budynku mieszkalnego wielorodzinnego przy ul. Cyrulików" loading="eager" fetchpriority="high" />
+        </figure>
+        <div class="hero-split-panel">
+          <div class="hero-split-copy">
+            <h1 id="about-title">Generalny wykonawca i projektant inwestycji budowlanych.</h1>
           </div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="about-stats-title">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="about-stats-title">Nasze liczby</h2>
-          </div>
+      <div class="container about-facts-wrap">
+        <ul class="about-facts" aria-label="Nasze liczby">
+          <li>
+            <strong>17+</strong>
+            <span>Lat doświadczenia</span>
+            <small>Od 2007 roku na rynku budowlanym</small>
+          </li>
+          <li>
+            <strong>100+</strong>
+            <span>Zrealizowanych projektów</span>
+            <small>Na terenie całej Polski</small>
+          </li>
+          <li>
+            <strong>3</strong>
+            <span>Podmioty biznesowe</span>
+            <small>Kompleksowa obsługa inwestycji</small>
+          </li>
+          <li>
+            <strong>Polska</strong>
+            <span>Zakres działalności</span>
+            <small>Projekty od północy do południa</small>
+          </li>
+        </ul>
+      </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin: 60px 0;">
-            <article style="text-align: center;">
-              <div style="font-size: 48px; font-weight: 700; color: var(--color-accent, #b08947); margin-bottom: 12px;">17+</div>
-              <h3 style="font-size: 16px; font-weight: 400; margin: 0 0 8px 0;">Lat doświadczenia</h3>
-              <p style="font-size: 14px; color: var(--color-muted); margin: 0;">Od 2007 roku na rynku budowlanym</p>
-            </article>
-            <article style="text-align: center;">
-              <div style="font-size: 48px; font-weight: 700; color: var(--color-accent, #b08947); margin-bottom: 12px;">100+</div>
-              <h3 style="font-size: 16px; font-weight: 400; margin: 0 0 8px 0;">Zrealizowanych projektów</h3>
-              <p style="font-size: 14px; color: var(--color-muted); margin: 0;">Na terenie całej Polski</p>
-            </article>
-            <article style="text-align: center;">
-              <div style="font-size: 48px; font-weight: 700; color: var(--color-accent, #b08947); margin-bottom: 12px;">3</div>
-              <h3 style="font-size: 16px; font-weight: 400; margin: 0 0 8px 0;">Podmioty biznesowe</h3>
-              <p style="font-size: 14px; color: var(--color-muted); margin: 0;">Kompleksowa obsługa inwestycji</p>
-            </article>
-            <article style="text-align: center;">
-              <div style="font-size: 48px; font-weight: 700; color: var(--color-accent, #b08947); margin-bottom: 12px;">Polska</div>
-              <h3 style="font-size: 16px; font-weight: 400; margin: 0 0 8px 0;">Zakres działalności</h3>
-              <p style="font-size: 14px; color: var(--color-muted); margin: 0;">Projekty od północy do południa</p>
-            </article>
+      <section class="v2-benefits section" aria-labelledby="about-values-title">
+        <div class="container v2-benefits-layout">
+          <div class="v2-benefits-intro">
+            <h2 id="about-values-title" class="title-rule">Jak pracujemy</h2>
+            <p>Działamy na rynku budowlanym od 2007 roku, zdobywając doświadczenie i zaufanie klientów na terenie całej Polski. Jako kompleksowy wykonawca i projektant inwestycji budowlanych realizujemy zaawansowane projekty budowlane dla obiektów użyteczności publicznej, kompleksów przemysłowych oraz budynków mieszkaniowych wielorodzinnych. Nasze usługi obejmują pełny zakres zarządzania projektami budowlanymi, od fazy projektowania, przez koordynację robót, aż do ostatecznych odbiorów i uruchomienia inwestycji.</p>
           </div>
+          <ol class="v2-benefits-list">
+            <li>
+              <h3>Nasz cel i podejście</h3>
+              <p>Naszym głównym celem jest sprostanie każdemu wyzwaniu budowlanemu, niezależnie od jego skali czy złożoności — od projektów standardowych po bardzo indywidualne i nietypowe przedsięwzięcia. Każde zlecenie traktujemy jako nowe zadanie wymagające zaangażowania i analitycznego podejścia. Szczegółowo analizujemy potrzeby inwestora i wymagania projektu, poszukujemy optymalnych rozwiązań technicznych i ekonomicznych, a następnie dopasowujemy strategie realizacji do specyfiki i charakteru obiektu. Stawiamy na autentyczną, partnerską współpracę, precyzyjne ustalenia i pełną odpowiedzialność za jakość wykonanych robót. Kombinując szerokie doświadczenie branżowe, sprawną organizację procesów budowlanych i profesjonalny nadzór jakości, zapewniamy terminową realizację projektów w pełnej zgodzie z wcześniej uzgodnionym standardem. Satysfakcja i zadowolenie naszego Klienta stanowi najważniejszą miarę naszego sukcesu.</p>
+            </li>
+            <li>
+              <h3>Nasze priorytety i wartości</h3>
+              <p>Najwyższą naszą prioritetą jest konsekwentna jakość realizowanych usług budowlanych, ponieważ rekomendacja naszej firmy przez zadowolonego klienta stanowi dla nas najlepszą i najbardziej wartościową formę promocji. Dlatego inwestujemy w przejrzystą komunikację na każdym etapie projektu, precyzyjne przestrzeganie uzgodnionych harmonogramów robót oraz ciągłą, ścisłą kontrolę jakości każdej fazy wykonania, gwarantując powtarzalny i niezmienny standard profesjonalnych usług. Konsekwentnie stawiamy na współpracę z doświadczonymi i rzetelnymi partnerami, sprawdzone i nowoczesne rozwiązania techniczne oraz materiały wysokiej jakości. Każdy projekt budowlany realizujemy z wyjątkową dbałością o bezpieczeństwo pracowników i otoczenia, utrzymanie porządku i czystości na terenie budowy, ścisłą zgodność z dokumentacją projektową oraz pełne spełnienie wszystkich wymagań i oczekiwań inwestora. Wysoką jakość naszych kompleksowych usług budowlanych poświadczają liczne referencje od zadowolonych klientów z całej Polski.</p>
+              <a class="inline-link" href="../referencje/">Zobacz nasze referencje</a>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="about-awards-title">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="about-awards-title">Nasze wyróżnienia</h2>
+      <section class="section about-awards-v2" aria-labelledby="about-awards-title">
+        <div class="container v2-benefits-layout">
+          <div class="v2-benefits-intro">
+            <h2 id="about-awards-title" class="title-rule">Nasze wyróżnienia</h2>
+            <p>Nasze zaangażowanie w ciągłe doskonalenie procesów, podnoszenie standardów jakości i inwestycje w rozwój zespołu zostały dostrzeżone przez branżę budowlaną. Dzień po dniu pracujemy nad tym, aby być lepszymi, bardziej efektywnymi i bardziej innowacyjnymi. Każde wyzwanie traktujemy jako szansę do nauki, a każdy projekt to okazja do doskonalenia naszych umiejętności. Wyróżnienia, które otrzymaliśmy, to potwierdzenie naszej pracy, dedykacji i wiary w to, że jakość nie jest wypadkową, lecz wynika z konsekwentnego podejścia do każdego szczegółu.</p>
           </div>
-
-          <div class="about-awards-content">
-            <div class="about-awards-copy">
-              <p>
-                Nasze zaangażowanie w ciągłe doskonalenie procesów, podnoszenie standardów jakości i inwestycje w rozwój zespołu zostały dostrzeżone przez branżę budowlaną. Dzień po dniu pracujemy nad tym, aby być lepszymi, bardziej efektywnymi i bardziej innowacyjnymi. Każde wyzwanie traktujemy jako szansę do nauki, a każdy projekt to okazja do doskonalenia naszych umiejętności. Wyróżnienia, które otrzymaliśmy, to potwierdzenie naszej pracy, dedykacji i wiary w to, że jakość nie jest wypadkową, lecz wynika z konsekwentnego podejścia do każdego szczegółu.
-              </p>
-            </div>
-            <div class="about-scope-awards" aria-label="Wyróżnienia">
-              <img src="../assets/diamenty-forbsa-2023.jpg" alt="Diamenty Forbesa 2023" loading="lazy" />
+          <div class="about-awards-images">
+            <img src="../assets/diamenty-forbsa-2023.jpg" alt="Diamenty Forbesa 2023" loading="lazy" />
               <img src="../assets/modernizacja-roku-2022.jpg" alt="Nominacja do konkursu Modernizacja Roku &amp; Budowa XXI w." loading="lazy" />
-            </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-alt about-registry-section" aria-labelledby="about-legal-title">
+      <section class="section about-registry-v2" aria-labelledby="about-legal-title">
         <div class="container">
-          <div class="section-heading section-heading-left about-registry-header">
-            <h2 id="about-legal-title">Dane rejestrowe i adresowe</h2>
-          </div>
-
+          <h2 id="about-legal-title" class="title-rule">Dane rejestrowe i&nbsp;adresowe</h2>
           <div class="about-registry-grid">
             <article class="about-registry-entry">
               <h3>WiMAKS Toczyłowski sp.k.</h3>
@@ -232,6 +193,6 @@
 
 	    <footer class="site-footer" data-site-footer></footer>
 
-    <script src="../site.js?v=20260921-18"></script>
+    <script src="../site.js?v=20261014-real1"></script>
   </body>
 </html>
