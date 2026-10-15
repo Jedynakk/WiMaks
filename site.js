@@ -293,7 +293,7 @@
         </div>
         <div class="footer-block" aria-label="Kontakt">
           <p class="footer-heading">Kontakt</p>
-          <a href="tel:+48786149888">+48 786 149 888</a>
+          <a href="tel:+48537555345">+48 537 555 345</a>
           <a href="mailto:biuro@wimaks.eu">biuro@wimaks.eu</a>
           <p>Poniedziałek-Piątek 8:00-16:00</p>
         </div>
