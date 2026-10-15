@@ -103,7 +103,7 @@
           </div>
 
 	          <div class="jobs-results-meta">
-	            <p id="jobs-results-count">Liczba ofert: 3</p>
+	            <p id="jobs-results-count">Liczba ofert: 19</p>
 	          </div>
 
           <div class="jobs-list" id="jobs-list">
@@ -472,7 +472,9 @@
       applyLocationOptions.addEventListener("change", updateLocationValidity);
       applyForm.addEventListener("submit", updateLocationValidity);
 
-	      resultsCount.textContent = "Liczba ofert: " + jobCards.length;
+	      resultsCount.textContent =
+        "Liczba ofert: " +
+        applyButtons.reduce((sum, button) => sum + button.dataset.locations.split("|").length, 0);
 
 	      function openApplyModal(role, locations) {
 	        applyPosition.value = role;
