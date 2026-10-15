@@ -3929,6 +3929,7 @@ main.v2 .section:nth-of-type(odd) {
 }
 
 .apply-form input,
+.apply-form select,
 .apply-form textarea {
   width: 100%;
   padding: 0.95rem 1rem;
@@ -3939,6 +3940,7 @@ main.v2 .section:nth-of-type(odd) {
 }
 
 .apply-form input:focus,
+.apply-form select:focus,
 .apply-form textarea:focus {
   outline: 2px solid rgba(30, 58, 138, 0.18);
   border-color: var(--color-primary);
@@ -9619,7 +9621,8 @@ main.page-jobs-v2 > .section:nth-of-type(odd) {
 }
 
 .page-jobs-v2 .job-meta-chips {
-  display: inline;
+  display: block;
+  flex-basis: 100%;
 }
 
 .page-jobs-v2 .job-location {
@@ -9650,6 +9653,14 @@ main.page-jobs-v2 > .section:nth-of-type(odd) {
 .page-jobs-v2 .job-toggle:hover .job-toggle-text,
 .page-jobs-v2 .job-toggle:focus-visible .job-toggle-text {
   color: var(--color-primary);
+}
+
+.page-jobs-v2 .job-summary {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .page-jobs-v2 .job-card-grid {
@@ -9829,6 +9840,7 @@ main.page-jobs-v2 > .section:nth-of-type(odd) {
 }
 
 .apply-form input,
+.apply-form select,
 .apply-form textarea {
   padding: 0.6rem 0.75rem;
   border-radius: 4px;
@@ -9847,10 +9859,49 @@ main.page-jobs-v2 > .section:nth-of-type(odd) {
 
 .apply-form label:has(textarea),
 .apply-form label:has(input[type="file"]),
+.apply-form .apply-locations,
 .apply-form .apply-consent,
 .apply-form .apply-note,
 .apply-form button {
   grid-column: 1 / -1;
+}
+
+.apply-locations {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.apply-locations legend {
+  margin-bottom: 0.4rem;
+  padding: 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.apply-locations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+}
+
+.apply-form .apply-locations-list label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.apply-form .apply-locations-list input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 .apply-form textarea {
